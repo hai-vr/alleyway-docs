@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Alleyway',
   tagline: '',
-  favicon: 'img/favicon.ico',
+  // favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -79,13 +79,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Alleyway',
-        logo: {
-          alt: 'Alleyway Logo',
-          src: 'img/logo.svg',
-        },
+        // logo: {
+        //   alt: 'Alleyway Logo',
+        //   src: 'img/logo.svg',
+        // },
         items: [
           {
             type: 'docSidebar',
