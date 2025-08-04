@@ -30,7 +30,7 @@ Wireless is not yet supported, as we do not currently have contributing develope
 Normally, robotic arms for domestic use are traditionally controlled using mathematical algorithms that produce smooth curves, which ensures that
 the motion of the robotic arm is comfortable and relatively free of haphazard motions.
 
-However, **this is NOT the case with this software**. Instead of mathematical algorithms, the robotic arm is controlled by a shared virtual world,
+However, **this is NOT the case with this software**. Instead of mathematical algorithms, the robotic arm is controlled by a shared virtual space,
 which is an imperfect system.
 
 When using a position system through a shared virtual space, **the motion of the robotic arm will not benefit from these safeties**.
@@ -48,7 +48,27 @@ for all parties**.
 
 ## Download
 
-TODO:
+:::danger
+This document is a draft. This software is not yet released.
+:::
+
+As a reminder, only the **computer connected** to the robotic arm needs the software and the shader.
+
+The other users in the virtual space do not need it, they just need a standard DPS-like light.
+
+### Software
+
+The software can be downloaded at this location:
+
+If you are a developer, you can [audit the software on GitHub](https://github.com/hai-vr/position-system-to-external-program/),
+which is released under the MIT License.
+
+### Shader
+
+To download the shader prefab:
+- Add the **Alleyway [ALCOM listing](vcc://vpm/addRepo?url=https://hai-vr.github.io/alleyway-listing/index.json)** to your repositories.
+  - `https://hai-vr.github.io/alleyway-listing/index.json`
+- Add the *Alleyway - Position System to External Program* package to your project.
 
 ## Method
 
@@ -59,4 +79,7 @@ To extract data, we provide three methods:
   which can be considered privacy-intrusive 👎.
 - In non-VR, you can extract data from a window.
 
-## Integration
+## Install
+
+Software:
+- If you don't have it already, download .NET 7.0 Runtime "Run console apps" https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime
