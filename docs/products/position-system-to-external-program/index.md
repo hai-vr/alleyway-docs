@@ -8,8 +8,8 @@ to a robotic arm.
 
 Other users may be able to remotely control the position and rotation of your robotic arm through a shared virtual space.
 
-:::danger
-This document is a draft. This software is not yet released.
+:::warning
+This document is a draft and may be incomplete.
 :::
 
 ## Robotic arms
@@ -18,8 +18,8 @@ As of currently, this software is known to function with the following robotic a
 
 | Vendor      | Model | Protocol | Communication mode | Tested |
 |-------------|-------|----------|--------------------|--------|
-| Tempest MAx | SR6   | T-code   | Serial port        | ✅      |
-| Tempest MAx | OSR2  | T-code   | Serial port        | ✅      |
+| Tempest MAx | SR6   | T-code   | Serial port        | ❓️     |
+| Tempest MAx | OSR2  | T-code   | Serial port        | ❓      |
 
 Wireless is not yet supported, as we do not currently have contributing developers who own such a device.
 
@@ -48,8 +48,8 @@ for all parties**.
 
 ## Download
 
-:::danger
-This document is a draft. This software is not yet released.
+:::warning
+This document is a draft and may be incomplete.
 :::
 
 As a reminder, only the **computer connected** to the robotic arm needs the software and the shader.
@@ -59,6 +59,8 @@ The other users in the virtual space do not need it, they just need a standard D
 ### Software
 
 The software can be downloaded at this location:
+
+- Download **[0.1.0-beta.1 (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/0.1.0-beta.1/dev.hai-vr.alleyway.position-system-to-external-program-0.1.0-beta.1-executable.zip)**
 
 If you are a developer, you can [audit the software on GitHub](https://github.com/hai-vr/position-system-to-external-program/),
 which is released under the MIT License.
@@ -79,7 +81,22 @@ To extract data, we provide three methods:
   which can be considered privacy-intrusive 👎.
 - In non-VR, you can extract data from a window.
 
+This software does not use OSC in any way.
+
 ## Install
+
+:::warning
+This document is a draft and may be incomplete.
+:::
 
 Software:
 - If you don't have it already, download .NET 7.0 Runtime "Run console apps" https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime
+
+TODO: Write instructions.
+
+In the avatar:
+- Add the *PositionSystemToExternalProgram-VRC-MA* prefab to your avatar root.
+
+In the software:
+- Connect your device through USB.
+- Click *Connect to device on serial port COM...*
