@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Position System to External Program | Alleyway</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Position System to External Program | Alleyway"><meta data-rh="true" name="description" content="Position System to External Program is a shader and a program that lets you connect the position of standard DPS-like lights"><meta data-rh="true" property="og:description" content="Position System to External Program is a shader and a program that lets you connect the position of standard DPS-like lights"><link data-rh="true" rel="canonical" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"><link data-rh="true" rel="alternate" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/" hreflang="en"><link data-rh="true" rel="alternate" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Products","item":"https://alleyway.hai-vr.dev/docs/products/"},{"@type":"ListItem","position":2,"name":"Position System to External Program","item":"https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"}]}</script><link rel="stylesheet" href="/assets/css/styles.0eee62c2.css">
-<script src="/assets/js/runtime~main.986f1ed9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.deeadac3.js" defer="defer"></script>
 <script src="/assets/js/main.2031006a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -15,6 +15,8 @@
 to a robotic arm.</p>
 <p>Other users may be able to remotely control the position and rotation of your robotic arm through a shared virtual space.</p>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>This document is a draft and may be incomplete.</p></div></div>
+<p>This is achieved by encoding pixels to the window screen or the image that is projected into the HMD, and our program then reads those pixels.<br>
+There is no modification to the computer program nor active process. There is no OSC either.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="robotic-arms">Robotic arms<a href="#robotic-arms" class="hash-link" aria-label="Direct link to Robotic arms" title="Direct link to Robotic arms">​</a></h2>
 <p>As of currently, this software is known to function with the following robotic arms:</p>
 <table><thead><tr><th>Vendor</th><th>Model</th><th>Protocol</th><th>Communication mode</th><th>Tested</th></tr></thead><tbody><tr><td>Tempest MAx</td><td>SR6</td><td>T-code</td><td>Serial port</td><td>❓️</td></tr><tr><td>Tempest MAx</td><td>OSR2</td><td>T-code</td><td>Serial port</td><td>❓</td></tr></tbody></table>
@@ -48,6 +50,7 @@ for all parties</strong>.</p>
 </ul>
 <p>If you are a developer, you can <a href="https://github.com/hai-vr/position-system-to-external-program/" target="_blank" rel="noopener noreferrer">audit the software on GitHub</a>,
 which is released under the MIT License.</p>
+<p>If you don&#x27;t have it already, download .NET 7.0 Runtime &quot;Run console apps&quot; <a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime" target="_blank" rel="noopener noreferrer">https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime</a></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="shader">Shader<a href="#shader" class="hash-link" aria-label="Direct link to Shader" title="Direct link to Shader">​</a></h3>
 <p>To download the shader prefab:</p>
 <ul>
@@ -58,7 +61,102 @@ which is released under the MIT License.</p>
 </li>
 <li>Add the <em>Alleyway - Position System to External Program</em> package to your project.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="method">Method<a href="#method" class="hash-link" aria-label="Direct link to Method" title="Direct link to Method">​</a></h2>
+<p>This software does not use OSC in any way.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="install">Install<a href="#install" class="hash-link" aria-label="Direct link to Install" title="Direct link to Install">​</a></h2>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>This document is a draft and may be incomplete.</p></div></div>
+<p>As a reminder, only the <strong>computer connected</strong> to the robotic arm needs the software and the shader.</p>
+<p>The other users in the virtual space do not need it, they just need a standard DPS-like light.</p>
+<p>This project does not provide those DPS-like lights.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="avatar-vrchat-platform-modular-avatar">Avatar: VRChat platform, Modular Avatar<a href="#avatar-vrchat-platform-modular-avatar" class="hash-link" aria-label="Direct link to Avatar: VRChat platform, Modular Avatar" title="Direct link to Avatar: VRChat platform, Modular Avatar">​</a></h3>
+<p>In the avatar:</p>
+<ul>
+<li>Add the <em>PositionSystemToExternalProgram-VRC-MA</em> prefab to your avatar root.</li>
+</ul>
+<p>You may customize the setup further, the following steps are optional:</p>
+<ul>
+<li>If you want to change the menu location, there is an <em>MA Menu Installer</em> component in <code>(prefab)/System/MA-MenuInstaller</code></li>
+<li>By default, the calibration origin will be on the right hand.<!-- -->
+<ul>
+<li>You can choose to switch it to your left hand using the <em>MA Bone Proxy</em> component located on <code>(prefab)/System/HandRoot</code>.</li>
+<li>It is not obvious whether you should define it as your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.</li>
+<li>Its child object <em>HandPalmDown</em> will be hovering under your palm, approximately at two hands&#x27; distance to your hand.</li>
+</ul>
+</li>
+</ul>
+<p>If you use an avatar optimization tool that merges meshes, exclude this object:</p>
+<ul>
+<li><code>(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PositionSystemToExternalProgramEncoder-Mesh</code></li>
+<li>This mesh is special and must not be converted or simplified.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="avatar-vrchat-platform-vrcfury">Avatar: VRChat platform, VRCFury<a href="#avatar-vrchat-platform-vrcfury" class="hash-link" aria-label="Direct link to Avatar: VRChat platform, VRCFury" title="Direct link to Avatar: VRChat platform, VRCFury">​</a></h3>
+<p>In the avatar:</p>
+<ul>
+<li>Add the <em>PositionSystemToExternalProgram-VRC-MA</em> prefab to your avatar root.</li>
+</ul>
+<p>I do not have VRCFury installed, and I am not familiar enough with its components; here are the things you need to know to adapt this prefab to VRCFury:</p>
+<ul>
+<li>Probably using <em>Full Controller</em>, manage to do the following:<!-- -->
+<ul>
+<li>Merge the animator located within the <em>Animator</em> component with paths relative to the <code>(prefab)/System</code> object, which is in:<!-- -->
+<ul>
+<li><em>Packages/Alleyway - Position System to External Program/Internal/Animator/PositionSystemToExternalProgram-Animator.asset`</em></li>
+</ul>
+</li>
+<li>Integrate the expression menu asset, which is in:<!-- -->
+<ul>
+<li><em>Packages/Alleyway - Position System to External Program/Internal/PositionSystemToExternalProgram-Menu.asset`</em></li>
+</ul>
+</li>
+<li>Integrate the expression parameters asset, which is in:<!-- -->
+<ul>
+<li><em>Packages/Alleyway - Position System to External Program/Internal/PositionSystemToExternalProgram-Parameters.asset`</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Probably using <em>Armature Link</em> bone reparenting function, or just through reparenting, manage to do the following:<!-- -->
+<ul>
+<li>Make <code>(prefab)/System/HandRoot</code> reparented to one of your hands, which will be used for calibrating the origin.<!-- -->
+<ul>
+<li>It is not obvious whether you should define it as your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.</li>
+<li>Its child object <em>HandPalmDown</em> will be hovering under your palm, approximately at two hands&#x27; distance to your hand.</li>
+</ul>
+</li>
+<li>Make <code>(prefab)/System/NeckRoot</code> reparented to your neck bone.</li>
+</ul>
+</li>
+</ul>
+<p>If you use an avatar optimization tool that merges meshes, exclude this object:</p>
+<ul>
+<li><code>(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PositionSystemToExternalProgramEncoder-Mesh</code></li>
+<li>This mesh is special and must not be converted or simplified.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="avatar-resonite">Avatar: Resonite<a href="#avatar-resonite" class="hash-link" aria-label="Direct link to Avatar: Resonite" title="Direct link to Avatar: Resonite">​</a></h3>
+<p>Resonite has support for Websockets, which can be used to extract a position and normal.</p>
+<p>We do not currently support websockets at this time. Please check back later!</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="avatar-chilloutvr">Avatar: ChilloutVR<a href="#avatar-chilloutvr" class="hash-link" aria-label="Direct link to Avatar: ChilloutVR" title="Direct link to Avatar: ChilloutVR">​</a></h3>
+<p>We do not currently have installation instructions for ChilloutVR.</p>
+<p>If you are more familiar with ChilloutVR, please reach out on the <a href="https://discord.gg/3VzveJQYWE" target="_blank" rel="noopener noreferrer">temporary Alleyway Discord server</a>.</p>
+<p>Consult the VRCFury instructions above; it will give you an insight of how to convert this prefab for use in VRCFury.</p>
+<p>There are constraints that need to be converted back to Unity systems, along with its animations; a prefab may be provided in the future for this purpose.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="avatar-applications-built-using-the-basis-framework">Avatar: Applications built using the Basis Framework<a href="#avatar-applications-built-using-the-basis-framework" class="hash-link" aria-label="Direct link to Avatar: Applications built using the Basis Framework" title="Direct link to Avatar: Applications built using the Basis Framework">​</a></h3>
+<p>Since Basis projects allow modification, the easiest way is <strong>not</strong> to use data extraction through pixels on the screen.</p>
+<p>The method could be the same as Resonite using Websockets. Please check back later!</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="run-the-software">Run the software<a href="#run-the-software" class="hash-link" aria-label="Direct link to Run the software" title="Direct link to Run the software">​</a></h3>
+<p>If you don&#x27;t have it already, download .NET 7.0 Runtime &quot;Run console apps&quot; <a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime" target="_blank" rel="noopener noreferrer">https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime</a></p>
+<ul>
+<li>Start <code>position-system.exe</code>.</li>
+<li>Connect your device through USB.</li>
+<li>Click <em>Connect to device on serial port COM...</em>
+<ul>
+<li>If you have multiple serial port devices selected, select the correct one beforehand using the dropdown (COM3, COM4, ...).</li>
+<li><em>If you own a 3D printer connected over USB, please make sure you don&#x27;t select its serial port. Turn off your 3D printer if you&#x27;re not sure.</em></li>
+</ul>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>If you made it this far into this draft documentation, you may want to know there is a <strong>new temporary Discord server</strong> here for early troubleshooting:
+<a href="https://discord.gg/3VzveJQYWE" target="_blank" rel="noopener noreferrer">https://discord.gg/3VzveJQYWE</a></p></div></div>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="method">Method<a href="#method" class="hash-link" aria-label="Direct link to Method" title="Direct link to Method">​</a></h4>
 <p>To extract data, we provide three methods:</p>
 <ul>
 <li>In VR, the data is extracted through an area located at the outer edge of your headset, which may be visible.<!-- -->
@@ -69,25 +167,6 @@ which is released under the MIT License.</p>
 <li>In VR, you may also choose to extract data from a window, but this may require the use of a camera normally used for streaming,
 which can be considered privacy-intrusive 👎.</li>
 <li>In non-VR, you can extract data from a window.</li>
-</ul>
-<p>This software does not use OSC in any way.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="install">Install<a href="#install" class="hash-link" aria-label="Direct link to Install" title="Direct link to Install">​</a></h2>
-<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>This document is a draft and may be incomplete.</p></div></div>
-<p>Software:</p>
-<ul>
-<li>If you don&#x27;t have it already, download .NET 7.0 Runtime &quot;Run console apps&quot; <a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime" target="_blank" rel="noopener noreferrer">https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime</a></li>
-</ul>
-<p>TODO: Write instructions.</p>
-<p>In the avatar:</p>
-<ul>
-<li>Add the <em>PositionSystemToExternalProgram-VRC-MA</em> prefab to your avatar root.</li>
-</ul>
-<p>In the software:</p>
-<ul>
-<li>Connect your device through USB.</li>
-<li>Click <em>Connect to device on serial port COM...</em></li>
-</ul>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>If you made it this far into this draft documentation, you may want to know there is a <strong>new temporary Discord server</strong> here for early troubleshooting:
-<a href="https://discord.gg/3VzveJQYWE" target="_blank" rel="noopener noreferrer">https://discord.gg/3VzveJQYWE</a></p></div></div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/products/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Products</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#robotic-arms" class="table-of-contents__link toc-highlight">Robotic arms</a></li><li><a href="#️-safety-warning" class="table-of-contents__link toc-highlight">⚠️ Safety warning</a></li><li><a href="#download" class="table-of-contents__link toc-highlight">Download</a><ul><li><a href="#software" class="table-of-contents__link toc-highlight">Software</a></li><li><a href="#shader" class="table-of-contents__link toc-highlight">Shader</a></li></ul></li><li><a href="#method" class="table-of-contents__link toc-highlight">Method</a></li><li><a href="#install" class="table-of-contents__link toc-highlight">Install</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Built with Docusaurus.</div></div></div></footer></div>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/products/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Products</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#robotic-arms" class="table-of-contents__link toc-highlight">Robotic arms</a></li><li><a href="#️-safety-warning" class="table-of-contents__link toc-highlight">⚠️ Safety warning</a></li><li><a href="#download" class="table-of-contents__link toc-highlight">Download</a><ul><li><a href="#software" class="table-of-contents__link toc-highlight">Software</a></li><li><a href="#shader" class="table-of-contents__link toc-highlight">Shader</a></li></ul></li><li><a href="#install" class="table-of-contents__link toc-highlight">Install</a><ul><li><a href="#avatar-vrchat-platform-modular-avatar" class="table-of-contents__link toc-highlight">Avatar: VRChat platform, Modular Avatar</a></li><li><a href="#avatar-vrchat-platform-vrcfury" class="table-of-contents__link toc-highlight">Avatar: VRChat platform, VRCFury</a></li><li><a href="#avatar-resonite" class="table-of-contents__link toc-highlight">Avatar: Resonite</a></li><li><a href="#avatar-chilloutvr" class="table-of-contents__link toc-highlight">Avatar: ChilloutVR</a></li><li><a href="#avatar-applications-built-using-the-basis-framework" class="table-of-contents__link toc-highlight">Avatar: Applications built using the Basis Framework</a></li><li><a href="#run-the-software" class="table-of-contents__link toc-highlight">Run the software</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>
