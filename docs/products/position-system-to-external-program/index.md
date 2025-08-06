@@ -11,6 +11,9 @@ Other users may be able to remotely control the position and rotation of your ro
 This document is a draft and may be incomplete.
 :::
 
+This is achieved by encoding pixels to the window screen or the image that is projected into the HMD, and our program then reads those pixels.<br/>
+There is no modification to the computer program nor active process. There is no OSC either.
+
 ## Robotic arms
 
 As of currently, this software is known to function with the following robotic arms:
@@ -64,21 +67,14 @@ The software can be downloaded at this location:
 If you are a developer, you can [audit the software on GitHub](https://github.com/hai-vr/position-system-to-external-program/),
 which is released under the MIT License.
 
+If you don't have it already, download .NET 7.0 Runtime "Run console apps" https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime
+
 ### Shader
 
 To download the shader prefab:
 - Add the **Alleyway [ALCOM listing](vcc://vpm/addRepo?url=https://hai-vr.github.io/alleyway-listing/index.json)** to your repositories.
   - `https://hai-vr.github.io/alleyway-listing/index.json`
 - Add the *Alleyway - Position System to External Program* package to your project.
-
-## Method
-
-To extract data, we provide three methods:
-- In VR, the data is extracted through an area located at the outer edge of your headset, which may be visible.
-  - This is the recommended method in VR because it is the least privacy-intrusive method in respect to other users.
-- In VR, you may also choose to extract data from a window, but this may require the use of a camera normally used for streaming,
-  which can be considered privacy-intrusive 👎.
-- In non-VR, you can extract data from a window.
 
 This software does not use OSC in any way.
 
@@ -88,19 +84,93 @@ This software does not use OSC in any way.
 This document is a draft and may be incomplete.
 :::
 
-Software:
-- If you don't have it already, download .NET 7.0 Runtime "Run console apps" https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime
+As a reminder, only the **computer connected** to the robotic arm needs the software and the shader.
 
-TODO: Write instructions.
+The other users in the virtual space do not need it, they just need a standard DPS-like light.
+
+This project does not provide those DPS-like lights.
+
+### Avatar: VRChat platform, Modular Avatar
 
 In the avatar:
 - Add the *PositionSystemToExternalProgram-VRC-MA* prefab to your avatar root.
 
-In the software:
+You may customize the setup further, the following steps are optional:
+- If you want to change the menu location, there is an *MA Menu Installer* component in `(prefab)/System/MA-MenuInstaller`
+- By default, the calibration origin will be on the right hand.
+  - You can choose to switch it to your left hand using the *MA Bone Proxy* component located on `(prefab)/System/HandRoot`.
+  - It is not obvious whether you should define it as your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
+  - Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
+
+If you use an avatar optimization tool that merges meshes, exclude this object:
+- `(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PositionSystemToExternalProgramEncoder-Mesh`
+- This mesh is special and must not be converted or simplified.
+
+### Avatar: VRChat platform, VRCFury
+
+In the avatar:
+- Add the *PositionSystemToExternalProgram-VRC-MA* prefab to your avatar root.
+
+I do not have VRCFury installed, and I am not familiar enough with its components; here are the things you need to know to adapt this prefab to VRCFury:
+- Probably using *Full Controller*, manage to do the following:
+  - Merge the animator located within the *Animator* component with paths relative to the `(prefab)/System` object, which is in:
+    - *Packages/Alleyway - Position System to External Program/Internal/Animator/PositionSystemToExternalProgram-Animator.asset`*
+  - Integrate the expression menu asset, which is in:
+    - *Packages/Alleyway - Position System to External Program/Internal/PositionSystemToExternalProgram-Menu.asset`*
+  - Integrate the expression parameters asset, which is in:
+    - *Packages/Alleyway - Position System to External Program/Internal/PositionSystemToExternalProgram-Parameters.asset`*
+- Probably using *Armature Link* bone reparenting function, or just through reparenting, manage to do the following:
+  - Make `(prefab)/System/HandRoot` reparented to one of your hands, which will be used for calibrating the origin.
+    - It is not obvious whether you should define it as your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
+    - Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
+  - Make `(prefab)/System/NeckRoot` reparented to your neck bone.
+
+If you use an avatar optimization tool that merges meshes, exclude this object:
+- `(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PositionSystemToExternalProgramEncoder-Mesh`
+- This mesh is special and must not be converted or simplified.
+
+### Avatar: Resonite
+
+Resonite has support for Websockets, which can be used to extract a position and normal.
+
+We do not currently support websockets at this time. Please check back later!
+
+### Avatar: ChilloutVR
+
+We do not currently have installation instructions for ChilloutVR.
+
+If you are more familiar with ChilloutVR, please reach out on the [temporary Alleyway Discord server](https://discord.gg/3VzveJQYWE).
+
+Consult the VRCFury instructions above; it will give you an insight of how to convert this prefab for use in VRCFury.
+
+There are constraints that need to be converted back to Unity systems, along with its animations; a prefab may be provided in the future for this purpose.
+
+### Avatar: Applications built using the Basis Framework
+
+Since Basis projects allow modification, the easiest way is **not** to use data extraction through pixels on the screen.
+
+The method could be the same as Resonite using Websockets. Please check back later!
+
+### Run the software
+
+If you don't have it already, download .NET 7.0 Runtime "Run console apps" https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime
+
+- Start `position-system.exe`.
 - Connect your device through USB.
 - Click *Connect to device on serial port COM...*
+  - If you have multiple serial port devices selected, select the correct one beforehand using the dropdown (COM3, COM4, ...).
+  - *If you own a 3D printer connected over USB, please make sure you don't select its serial port. Turn off your 3D printer if you're not sure.*
 
 :::info
 If you made it this far into this draft documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:
 https://discord.gg/3VzveJQYWE
 :::
+
+#### Method
+
+To extract data, we provide three methods:
+- In VR, the data is extracted through an area located at the outer edge of your headset, which may be visible.
+  - This is the recommended method in VR because it is the least privacy-intrusive method in respect to other users.
+- In VR, you may also choose to extract data from a window, but this may require the use of a camera normally used for streaming,
+  which can be considered privacy-intrusive 👎.
+- In non-VR, you can extract data from a window.
