@@ -14,6 +14,8 @@ This document is a draft and may be incomplete.
 This is achieved by encoding pixels to the window screen or the image that is projected into the HMD, and our program then reads those pixels.<br/>
 There is no modification to the computer program nor active process. There is no OSC either.
 
+Alternatively, this optionally exposes a WebSocket service to enable direct control from virtual space systems like Resonite.
+
 ## Robotic arms
 
 As of currently, this software is known to function with the following robotic arms:
@@ -133,7 +135,9 @@ If you use an avatar optimization tool that merges meshes, exclude this object:
 
 Resonite has support for Websockets, which can be used to extract a position and normal.
 
-We do not currently support websockets at this time. Please check back later!
+Use [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
+
+We do not currently provide a readily usable ProtoFlux item at this time.
 
 ### Avatar: ChilloutVR
 
@@ -145,11 +149,13 @@ Consult the VRCFury instructions above; it will give you an insight of how to co
 
 There are constraints that need to be converted back to Unity systems, along with its animations; a prefab may be provided in the future for this purpose.
 
+If you can modify ChilloutVR, you may also look into using [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
+
 ### Avatar: Applications built using the Basis Framework
 
 Since Basis projects allow modification, the easiest way is **not** to use data extraction through pixels on the screen.
 
-The method could be the same as Resonite using Websockets. Please check back later!
+Use [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system) instead.
 
 ### Run the software
 
@@ -174,3 +180,10 @@ To extract data, we provide three methods:
 - In VR, you may also choose to extract data from a window, but this may require the use of a camera normally used for streaming,
   which can be considered privacy-intrusive 👎.
 - In non-VR, you can extract data from a window.
+
+#### WebSockets
+
+If you are using *Resonite*, or if you are modifying *ChilloutVR*, or if you are making an application built using the Basis Framework,
+you should probably use [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
+
+In the *Data calibration* tab of the software, at the bottom in the *Resonite WebSockets* section, check the box to enable the WebSocket service. 
