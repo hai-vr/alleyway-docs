@@ -59,7 +59,7 @@ The other users in the virtual space do not need it, they just need a standard D
 
 The software can be downloaded at this location:
 
-- Download **[0.1.0-beta.1 (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/0.1.0-beta.1/dev.hai-vr.alleyway.position-system-to-external-program-0.1.0-beta.1-executable.zip)**
+- Download **[0.1.0-beta.2 (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/0.1.0-beta.2/position-system-0.1.0-beta.2-executable.zip)**
 
 If you are a developer, you can [audit the software on GitHub](https://github.com/hai-vr/position-system-to-external-program/),
 which is released under the MIT License.
