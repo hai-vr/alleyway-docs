@@ -1,5 +1,4 @@
 ﻿---
-unlisted: true
 title: "Position System to External Program"
 ---
 
@@ -100,3 +99,8 @@ In the avatar:
 In the software:
 - Connect your device through USB.
 - Click *Connect to device on serial port COM...*
+
+:::info
+If you made it this far into this draft documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:
+https://discord.gg/3VzveJQYWE
+:::
