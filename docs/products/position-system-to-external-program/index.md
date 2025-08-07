@@ -51,7 +51,7 @@ When using a position system through a shared virtual space, **the motion of the
 Carefully consider the following risks:
 - If the entity controlling the position of your robotic arm suffers from loss of tracking, the robotic arm may treat that loss of tracking as a position to reach.
 - If the entity controlling the position of your robotic arm moves too fast, the robotic arm may attempt to reach that position faster than the motors are capable of,
-which will result in unexpected angles from your robotic arm.
+which will result in unexpected angles from your robotic arm. The more degrees of freedom your device has, the more likely this is going to happen.
 - In addition, the firmware and hardware will be subjected to positions that may be considered unusual by traditional software, and therefore those positions may be less tested.
 These unusual positions could cause damage to your robotic arm or reveal bugs in the firmware that may compromise the expected position of the robotic arm.
 
@@ -89,7 +89,7 @@ To download the shader prefab:
   - `https://hai-vr.github.io/alleyway-listing/index.json`
 - Add the *Alleyway - Position System to External Program* package to your project.
 
-## Install
+## Install the data encoder (shader)
 
 :::warning
 This document is a draft and may be incomplete.
@@ -101,7 +101,7 @@ The other users in the virtual space do not need it, they just need a standard D
 
 This project does not provide those DPS-like lights.
 
-### Avatar: VRChat platform, Modular Avatar
+### VRChat Avatars SDK using Modular Avatar
 
 <HaiTags>
 <HaiTag requiresVRChat={true} short={true} />
@@ -121,16 +121,16 @@ If you use an avatar optimization tool that merges meshes, exclude this object:
 - `(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PositionSystemToExternalProgramEncoder-Mesh`
 - This mesh is special and must not be converted or simplified.
 
-### Avatar: VRChat platform, VRCFury
+### VRChat Avatars SDK using VRCFury
 
 <HaiTags>
 <HaiTag requiresVRChat={true} short={true} />
 </HaiTags>
 
+I do not have VRCFury installed, and I am not familiar enough with its components; here are the things you need to know to adapt this prefab to VRCFury:
+
 In the avatar:
 - Add the *PositionSystemToExternalProgram-VRC-MA* prefab to your avatar root.
-
-I do not have VRCFury installed, and I am not familiar enough with its components; here are the things you need to know to adapt this prefab to VRCFury:
 - Probably using *Full Controller*, manage to do the following:
   - Merge the animator located within the *Animator* component with paths relative to the `(prefab)/System` object, which is in:
     - *`Packages/Alleyway - Position System to External Program/Internal/Animator/PositionSystemToExternalProgram-Animator.asset`*
@@ -148,7 +148,18 @@ If you use an avatar optimization tool that merges meshes, exclude this object:
 - `(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PositionSystemToExternalProgramEncoder-Mesh`
 - This mesh is special and must not be converted or simplified.
 
-### Avatar: Resonite
+### VRChat Worlds SDK
+
+🚫 Integrating the data encoder part of the system is not recommended in worlds.
+This is because the shader material may need to be customized by the user to fix alignment issues within the HMD.
+
+However, remember that DPS-like lights are not limited to avatars. If you want a world to control a robotic arm, you may be able
+to use the same DPS-like light setup.
+
+Also, we support [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system);
+you could optionally build a log parser that submits commands to the WebSocker.
+
+### Resonite
 
 <HaiTags>
 <HaiTag requiresResonite={true} short={true} />
@@ -156,11 +167,21 @@ If you use an avatar optimization tool that merges meshes, exclude this object:
 
 Resonite has support for Websockets, which can be used to extract a position and normal.
 
-Use [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
+Create a *WebsocketClient* component in an object. Use a *Websocket Text Message Sender* node to send a text message.
+- The text message string needs to be formatted as specified in the [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system) documentation.
+- Pass a position (e.g., local transform, or global transform) in a given coordinate space.
+- Pass a direction (e.g., something like Up or Forward direction) in the same coordinate space as the position.
 
-We do not currently provide a readily usable ProtoFlux item at this time.
+When using the software, you will need to enable the WebSockets service as it is off by default. This is explained later in this documentation.
 
-### Avatar: ChilloutVR
+We do not currently provide a readily usable ProtoFlux item at this time. Use the picture below as a reference for a possible implementation.
+
+If you're reading this, you probably have better knowledge of ProtoFlux than I do, so if you see obvious mistakes in that blueprint,
+don't copy it.
+
+![resonite_websocket.jpg](img/resonite_websocket.jpg)
+
+### ChilloutVR
 
 <HaiTags>
 <HaiTag requiresChilloutVR={true} short={true} />
@@ -176,7 +197,7 @@ There are constraints that need to be converted back to Unity systems, along wit
 
 If you can modify ChilloutVR, you may also look into using [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
 
-### Avatar: Applications built using the Basis Framework
+### Applications built using the Basis Framework
 
 <HaiTags>
 <HaiTag requiresBasis={true} short={true} />
@@ -227,4 +248,13 @@ To extract data, we provide three methods:
 If you are using *Resonite*, or if you are modifying *ChilloutVR*, or if you are making an application built using the Basis Framework,
 you should probably use [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
 
-In the *Data calibration* tab of the software, at the bottom in the *Resonite WebSockets* section, check the box to enable the WebSocket service. 
+In the *Data calibration* tab of the software, at the bottom in the *Resonite WebSockets* section, check the box to enable the WebSocket service.
+
+---
+
+## Developer documentation
+
+All the documentation sections above are meant for users of the application.
+
+If you are a developer, you should consult the [README.md on GitHub](https://github.com/hai-vr/position-system-to-external-program/)
+for technical information about the extraction process, the shader, the WebSockets API, and the camera position extraction.
