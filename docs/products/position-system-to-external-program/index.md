@@ -70,7 +70,7 @@ The other users in the virtual space do not need it, they just need a standard D
 
 The software can be downloaded at this location:
 
-- Download **[0.1.0-beta.3 (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/0.1.0-beta.3/position-system-0.1.0-beta.3-executable.zip)**
+- Download **[0.1.0-beta.5 (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/0.1.0-beta.5/position-system-0.1.0-beta.5-executable.zip)**
 
 If you are a developer, you can [audit the software on GitHub](https://github.com/hai-vr/position-system-to-external-program/),
 which is released under the MIT License.
@@ -133,11 +133,11 @@ In the avatar:
 I do not have VRCFury installed, and I am not familiar enough with its components; here are the things you need to know to adapt this prefab to VRCFury:
 - Probably using *Full Controller*, manage to do the following:
   - Merge the animator located within the *Animator* component with paths relative to the `(prefab)/System` object, which is in:
-    - *Packages/Alleyway - Position System to External Program/Internal/Animator/PositionSystemToExternalProgram-Animator.asset`*
+    - *`Packages/Alleyway - Position System to External Program/Internal/Animator/PositionSystemToExternalProgram-Animator.asset`*
   - Integrate the expression menu asset, which is in:
-    - *Packages/Alleyway - Position System to External Program/Internal/PositionSystemToExternalProgram-Menu.asset`*
+    - *`Packages/Alleyway - Position System to External Program/Internal/PositionSystemToExternalProgram-Menu.asset`*
   - Integrate the expression parameters asset, which is in:
-    - *Packages/Alleyway - Position System to External Program/Internal/PositionSystemToExternalProgram-Parameters.asset`*
+    - *`Packages/Alleyway - Position System to External Program/Internal/PositionSystemToExternalProgram-Parameters.asset`*
 - Probably using *Armature Link* bone reparenting function, or just through reparenting, manage to do the following:
   - Make `(prefab)/System/HandRoot` reparented to one of your hands, which will be used for calibrating the origin.
     - It is not obvious whether you should define it as your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
