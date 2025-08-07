@@ -1,6 +1,14 @@
 ﻿---
 title: "Position System to External Program"
 ---
+import {HaiTags} from "/src/components/HaiTags";
+import {HaiTag} from "/src/components/HaiTag";
+import {HaiVideo} from "/src/components/HaiVideo";
+
+<HaiTags>
+<HaiTag requiresResonite={true} short={true} />
+<HaiTag requiresVRChat={true} short={true} />
+</HaiTags>
 
 *Position System to External Program* is a **shader** and a **program** that lets you connect the position of standard DPS-like lights
 to a robotic arm.
@@ -52,10 +60,6 @@ for all parties**.
 
 ## Download
 
-:::warning
-This document is a draft and may be incomplete.
-:::
-
 As a reminder, only the **computer connected** to the robotic arm needs the software and the shader.
 
 The other users in the virtual space do not need it, they just need a standard DPS-like light.
@@ -64,7 +68,7 @@ The other users in the virtual space do not need it, they just need a standard D
 
 The software can be downloaded at this location:
 
-- Download **[0.1.0-beta.2 (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/0.1.0-beta.2/position-system-0.1.0-beta.2-executable.zip)**
+- Download **[0.1.0-beta.3 (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/0.1.0-beta.3/position-system-0.1.0-beta.3-executable.zip)**
 
 If you are a developer, you can [audit the software on GitHub](https://github.com/hai-vr/position-system-to-external-program/),
 which is released under the MIT License.
@@ -72,6 +76,11 @@ which is released under the MIT License.
 If you don't have it already, download .NET 7.0 Runtime "Run console apps" https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime
 
 ### Shader
+
+<HaiTags>
+<HaiTag requiresVRChat={true} short={true} />
+<HaiTag requiresChilloutVR={true} short={true} />
+</HaiTags>
 
 To download the shader prefab:
 - Add the **Alleyway [ALCOM listing](vcc://vpm/addRepo?url=https://hai-vr.github.io/alleyway-listing/index.json)** to your repositories.
@@ -94,6 +103,10 @@ This project does not provide those DPS-like lights.
 
 ### Avatar: VRChat platform, Modular Avatar
 
+<HaiTags>
+<HaiTag requiresVRChat={true} short={true} />
+</HaiTags>
+
 In the avatar:
 - Add the *PositionSystemToExternalProgram-VRC-MA* prefab to your avatar root.
 
@@ -109,6 +122,10 @@ If you use an avatar optimization tool that merges meshes, exclude this object:
 - This mesh is special and must not be converted or simplified.
 
 ### Avatar: VRChat platform, VRCFury
+
+<HaiTags>
+<HaiTag requiresVRChat={true} short={true} />
+</HaiTags>
 
 In the avatar:
 - Add the *PositionSystemToExternalProgram-VRC-MA* prefab to your avatar root.
@@ -133,6 +150,10 @@ If you use an avatar optimization tool that merges meshes, exclude this object:
 
 ### Avatar: Resonite
 
+<HaiTags>
+<HaiTag requiresResonite={true} short={true} />
+</HaiTags>
+
 Resonite has support for Websockets, which can be used to extract a position and normal.
 
 Use [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
@@ -141,11 +162,15 @@ We do not currently provide a readily usable ProtoFlux item at this time.
 
 ### Avatar: ChilloutVR
 
+<HaiTags>
+<HaiTag requiresChilloutVR={true} short={true} />
+</HaiTags>
+
 We do not currently have installation instructions for ChilloutVR.
 
 If you are more familiar with ChilloutVR, please reach out on the [temporary Alleyway Discord server](https://discord.gg/3VzveJQYWE).
 
-Consult the VRCFury instructions above; it will give you an insight of how to convert this prefab for use in VRCFury.
+Consult the VRCFury instructions above as a reference to what each GameObject does; it will give you an insight of how to convert this prefab.
 
 There are constraints that need to be converted back to Unity systems, along with its animations; a prefab may be provided in the future for this purpose.
 
@@ -153,11 +178,15 @@ If you can modify ChilloutVR, you may also look into using [WebSockets](https://
 
 ### Avatar: Applications built using the Basis Framework
 
+<HaiTags>
+<HaiTag requiresBasis={true} short={true} />
+</HaiTags>
+
 Since Basis projects allow modification, the easiest way is **not** to use data extraction through pixels on the screen.
 
 Use [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system) instead.
 
-### Run the software
+## Run the software
 
 If you don't have it already, download .NET 7.0 Runtime "Run console apps" https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime
 
@@ -173,15 +202,26 @@ https://discord.gg/3VzveJQYWE
 :::
 
 #### Method
+<HaiTags>
+<HaiTag requiresVRChat={true} short={true} />
+<HaiTag requiresChilloutVR={true} short={true} />
+</HaiTags>
 
 To extract data, we provide three methods:
 - In VR, the data is extracted through an area located at the outer edge of your headset, which may be visible.
   - This is the recommended method in VR because it is the least privacy-intrusive method in respect to other users.
+  - This requires <HaiTag requiresSteamVR={true} short={true} />.
 - In VR, you may also choose to extract data from a window, but this may require the use of a camera normally used for streaming,
   which can be considered privacy-intrusive 👎.
 - In non-VR, you can extract data from a window.
 
 #### WebSockets
+
+<HaiTags>
+<HaiTag requiresResonite={true} short={true} />
+<HaiTag requiresBasis={true} short={true} />
+<HaiTag requiresChilloutVR={true} short={true} />
+</HaiTags>
 
 If you are using *Resonite*, or if you are modifying *ChilloutVR*, or if you are making an application built using the Basis Framework,
 you should probably use [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
