@@ -22,7 +22,9 @@ This document is a draft and may be incomplete.
 This is achieved by encoding pixels to the window screen or the image that is projected into the HMD, and our program then reads those pixels.<br/>
 There is no modification to the computer program nor active process. There is no OSC either.
 
-Alternatively, this optionally exposes a WebSocket service to enable direct control from virtual space systems like Resonite.
+In addition:
+- The position and rotation of the camera in world space is also extracted. This could be used to pin SteamVR overlays in world space.
+- This optionally exposes a WebSocket service to enable direct control of the robotic arm from virtual space systems like Resonite.
 
 ## Robotic arms
 
@@ -86,8 +88,6 @@ To download the shader prefab:
 - Add the **Alleyway [ALCOM listing](vcc://vpm/addRepo?url=https://hai-vr.github.io/alleyway-listing/index.json)** to your repositories.
   - `https://hai-vr.github.io/alleyway-listing/index.json`
 - Add the *Alleyway - Position System to External Program* package to your project.
-
-This software does not use OSC in any way.
 
 ## Install
 
@@ -195,6 +195,7 @@ If you don't have it already, download .NET 7.0 Runtime "Run console apps" https
 - Click *Connect to device on serial port COM...*
   - If you have multiple serial port devices selected, select the correct one beforehand using the dropdown (COM3, COM4, ...).
   - *If you own a 3D printer connected over USB, please make sure you don't select its serial port. Turn off your 3D printer if you're not sure.*
+  
 
 :::info
 If you made it this far into this draft documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:
