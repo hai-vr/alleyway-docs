@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Position System to External Program | Alleyway</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Position System to External Program | Alleyway"><meta data-rh="true" name="description" content="Position System to External Program is a shader and a program that lets you connect the position of standard DPS-like lights"><meta data-rh="true" property="og:description" content="Position System to External Program is a shader and a program that lets you connect the position of standard DPS-like lights"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"><link data-rh="true" rel="alternate" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/" hreflang="en"><link data-rh="true" rel="alternate" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Products","item":"https://alleyway.hai-vr.dev/docs/products/"},{"@type":"ListItem","position":2,"name":"Position System to External Program","item":"https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"}]}</script><link rel="stylesheet" href="/assets/css/styles.7396b508.css">
-<script src="/assets/js/runtime~main.812c81d1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.800062ad.js" defer="defer"></script>
 <script src="/assets/js/main.79aca19a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -18,7 +18,11 @@ to a robotic arm.</p>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>This document is a draft and may be incomplete.</p></div></div>
 <p>This is achieved by encoding pixels to the window screen or the image that is projected into the HMD, and our program then reads those pixels.<br>
 There is no modification to the computer program nor active process. There is no OSC either.</p>
-<p>Alternatively, this optionally exposes a WebSocket service to enable direct control from virtual space systems like Resonite.</p>
+<p>In addition:</p>
+<ul>
+<li>The position and rotation of the camera in world space is also extracted. This could be used to pin SteamVR overlays in world space.</li>
+<li>This optionally exposes a WebSocket service to enable direct control of the robotic arm from virtual space systems like Resonite.</li>
+</ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="robotic-arms">Robotic arms<a href="#robotic-arms" class="hash-link" aria-label="Direct link to Robotic arms" title="Direct link to Robotic arms">​</a></h2>
 <p>As of currently, this software is known to function with the following robotic arms:</p>
 <table><thead><tr><th>Vendor</th><th>Model</th><th>Protocol</th><th>Communication mode</th><th>Tested</th></tr></thead><tbody><tr><td>Tempest MAx</td><td>SR6</td><td>T-code</td><td>Serial port</td><td>❓️</td></tr><tr><td>Tempest MAx</td><td>OSR2</td><td>T-code</td><td>Serial port</td><td>❓</td></tr></tbody></table>
@@ -63,7 +67,6 @@ which is released under the MIT License.</p>
 </li>
 <li>Add the <em>Alleyway - Position System to External Program</em> package to your project.</li>
 </ul>
-<p>This software does not use OSC in any way.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="install">Install<a href="#install" class="hash-link" aria-label="Direct link to Install" title="Direct link to Install">​</a></h2>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>This document is a draft and may be incomplete.</p></div></div>
 <p>As a reminder, only the <strong>computer connected</strong> to the robotic arm needs the software and the shader.</p>
