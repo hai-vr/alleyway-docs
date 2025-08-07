@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Position System to External Program | Alleyway</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Position System to External Program | Alleyway"><meta data-rh="true" name="description" content="Position System to External Program is a shader and a program that lets you connect the position of standard DPS-like lights"><meta data-rh="true" property="og:description" content="Position System to External Program is a shader and a program that lets you connect the position of standard DPS-like lights"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"><link data-rh="true" rel="alternate" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/" hreflang="en"><link data-rh="true" rel="alternate" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Products","item":"https://alleyway.hai-vr.dev/docs/products/"},{"@type":"ListItem","position":2,"name":"Position System to External Program","item":"https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"}]}</script><link rel="stylesheet" href="/assets/css/styles.7396b508.css">
-<script src="/assets/js/runtime~main.78070bc0.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.bbe9e42e.js" defer="defer"></script>
 <script src="/assets/js/main.79aca19a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -38,7 +38,7 @@ Carefully consider the following risks:</p>
 <ul>
 <li>If the entity controlling the position of your robotic arm suffers from loss of tracking, the robotic arm may treat that loss of tracking as a position to reach.</li>
 <li>If the entity controlling the position of your robotic arm moves too fast, the robotic arm may attempt to reach that position faster than the motors are capable of,
-which will result in unexpected angles from your robotic arm.</li>
+which will result in unexpected angles from your robotic arm. The more degrees of freedom your device has, the more likely this is going to happen.</li>
 <li>In addition, the firmware and hardware will be subjected to positions that may be considered unusual by traditional software, and therefore those positions may be less tested.
 These unusual positions could cause damage to your robotic arm or reveal bugs in the firmware that may compromise the expected position of the robotic arm.</li>
 </ul>
@@ -67,12 +67,12 @@ which is released under the MIT License.</p>
 </li>
 <li>Add the <em>Alleyway - Position System to External Program</em> package to your project.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="install">Install<a href="#install" class="hash-link" aria-label="Direct link to Install" title="Direct link to Install">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="install-the-data-encoder-shader">Install the data encoder (shader)<a href="#install-the-data-encoder-shader" class="hash-link" aria-label="Direct link to Install the data encoder (shader)" title="Direct link to Install the data encoder (shader)">​</a></h2>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>This document is a draft and may be incomplete.</p></div></div>
 <p>As a reminder, only the <strong>computer connected</strong> to the robotic arm needs the software and the shader.</p>
 <p>The other users in the virtual space do not need it, they just need a standard DPS-like light.</p>
 <p>This project does not provide those DPS-like lights.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="avatar-vrchat-platform-modular-avatar">Avatar: VRChat platform, Modular Avatar<a href="#avatar-vrchat-platform-modular-avatar" class="hash-link" aria-label="Direct link to Avatar: VRChat platform, Modular Avatar" title="Direct link to Avatar: VRChat platform, Modular Avatar">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vrchat-avatars-sdk-using-modular-avatar">VRChat Avatars SDK using Modular Avatar<a href="#vrchat-avatars-sdk-using-modular-avatar" class="hash-link" aria-label="Direct link to VRChat Avatars SDK using Modular Avatar" title="Direct link to VRChat Avatars SDK using Modular Avatar">​</a></h3>
 <div><p><span><div class="hai_tag_ZcC4 hai_tag_requires_vrchat_kYpu">💬 <span class="notranslate">VRChat</span></div></span></p></div>
 <p>In the avatar:</p>
 <ul>
@@ -94,14 +94,12 @@ which is released under the MIT License.</p>
 <li><code>(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PositionSystemToExternalProgramEncoder-Mesh</code></li>
 <li>This mesh is special and must not be converted or simplified.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="avatar-vrchat-platform-vrcfury">Avatar: VRChat platform, VRCFury<a href="#avatar-vrchat-platform-vrcfury" class="hash-link" aria-label="Direct link to Avatar: VRChat platform, VRCFury" title="Direct link to Avatar: VRChat platform, VRCFury">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vrchat-avatars-sdk-using-vrcfury">VRChat Avatars SDK using VRCFury<a href="#vrchat-avatars-sdk-using-vrcfury" class="hash-link" aria-label="Direct link to VRChat Avatars SDK using VRCFury" title="Direct link to VRChat Avatars SDK using VRCFury">​</a></h3>
 <div><p><span><div class="hai_tag_ZcC4 hai_tag_requires_vrchat_kYpu">💬 <span class="notranslate">VRChat</span></div></span></p></div>
+<p>I do not have VRCFury installed, and I am not familiar enough with its components; here are the things you need to know to adapt this prefab to VRCFury:</p>
 <p>In the avatar:</p>
 <ul>
 <li>Add the <em>PositionSystemToExternalProgram-VRC-MA</em> prefab to your avatar root.</li>
-</ul>
-<p>I do not have VRCFury installed, and I am not familiar enough with its components; here are the things you need to know to adapt this prefab to VRCFury:</p>
-<ul>
 <li>Probably using <em>Full Controller</em>, manage to do the following:<!-- -->
 <ul>
 <li>Merge the animator located within the <em>Animator</em> component with paths relative to the <code>(prefab)/System</code> object, which is in:<!-- -->
@@ -138,19 +136,35 @@ which is released under the MIT License.</p>
 <li><code>(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PositionSystemToExternalProgramEncoder-Mesh</code></li>
 <li>This mesh is special and must not be converted or simplified.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="avatar-resonite">Avatar: Resonite<a href="#avatar-resonite" class="hash-link" aria-label="Direct link to Avatar: Resonite" title="Direct link to Avatar: Resonite">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vrchat-worlds-sdk">VRChat Worlds SDK<a href="#vrchat-worlds-sdk" class="hash-link" aria-label="Direct link to VRChat Worlds SDK" title="Direct link to VRChat Worlds SDK">​</a></h3>
+<p>🚫 Integrating the data encoder part of the system is not recommended in worlds.
+This is because the shader material may need to be customized by the user to fix alignment issues within the HMD.</p>
+<p>However, remember that DPS-like lights are not limited to avatars. If you want a world to control a robotic arm, you may be able
+to use the same DPS-like light setup.</p>
+<p>Also, we support <a href="https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system" target="_blank" rel="noopener noreferrer">WebSockets</a>;
+you could optionally build a log parser that submits commands to the WebSocker.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="resonite">Resonite<a href="#resonite" class="hash-link" aria-label="Direct link to Resonite" title="Direct link to Resonite">​</a></h3>
 <div><p><span><div class="hai_tag_ZcC4 hai_tag_requires_resonite_AvzK">⚡ <span class="notranslate">Resonite</span></div></span></p></div>
 <p>Resonite has support for Websockets, which can be used to extract a position and normal.</p>
-<p>Use <a href="https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system" target="_blank" rel="noopener noreferrer">WebSockets</a>.</p>
-<p>We do not currently provide a readily usable ProtoFlux item at this time.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="avatar-chilloutvr">Avatar: ChilloutVR<a href="#avatar-chilloutvr" class="hash-link" aria-label="Direct link to Avatar: ChilloutVR" title="Direct link to Avatar: ChilloutVR">​</a></h3>
+<p>Create a <em>WebsocketClient</em> component in an object. Use a <em>Websocket Text Message Sender</em> node to send a text message.</p>
+<ul>
+<li>The text message string needs to be formatted as specified in the <a href="https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system" target="_blank" rel="noopener noreferrer">WebSockets</a> documentation.</li>
+<li>Pass a position (e.g., local transform, or global transform) in a given coordinate space.</li>
+<li>Pass a direction (e.g., something like Up or Forward direction) in the same coordinate space as the position.</li>
+</ul>
+<p>When using the software, you will need to enable the WebSockets service as it is off by default. This is explained later in this documentation.</p>
+<p>We do not currently provide a readily usable ProtoFlux item at this time. Use the picture below as a reference for a possible implementation.</p>
+<p>If you&#x27;re reading this, you probably have better knowledge of ProtoFlux than I do, so if you see obvious mistakes in that blueprint,
+don&#x27;t copy it.</p>
+<p><img decoding="async" loading="lazy" alt="resonite_websocket.jpg" src="/assets/images/resonite_websocket-d0aa066037be32f815ccad26a3724658.jpg" width="2348" height="1350" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="chilloutvr">ChilloutVR<a href="#chilloutvr" class="hash-link" aria-label="Direct link to ChilloutVR" title="Direct link to ChilloutVR">​</a></h3>
 <div><p><span><div class="hai_tag_ZcC4 hai_tag_requires_chilloutvr_mrre">🌆 <span class="notranslate">ChilloutVR</span></div></span></p></div>
 <p>We do not currently have installation instructions for ChilloutVR.</p>
 <p>If you are more familiar with ChilloutVR, please reach out on the <a href="https://discord.gg/3VzveJQYWE" target="_blank" rel="noopener noreferrer">temporary Alleyway Discord server</a>.</p>
 <p>Consult the VRCFury instructions above as a reference to what each GameObject does; it will give you an insight of how to convert this prefab.</p>
 <p>There are constraints that need to be converted back to Unity systems, along with its animations; a prefab may be provided in the future for this purpose.</p>
 <p>If you can modify ChilloutVR, you may also look into using <a href="https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system" target="_blank" rel="noopener noreferrer">WebSockets</a>.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="avatar-applications-built-using-the-basis-framework">Avatar: Applications built using the Basis Framework<a href="#avatar-applications-built-using-the-basis-framework" class="hash-link" aria-label="Direct link to Avatar: Applications built using the Basis Framework" title="Direct link to Avatar: Applications built using the Basis Framework">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="applications-built-using-the-basis-framework">Applications built using the Basis Framework<a href="#applications-built-using-the-basis-framework" class="hash-link" aria-label="Direct link to Applications built using the Basis Framework" title="Direct link to Applications built using the Basis Framework">​</a></h3>
 <div><p><span><div class="hai_tag_ZcC4 hai_tag_requires_basis_QHoe">🔺 <span class="notranslate">Basis</span></div></span></p></div>
 <p>Since Basis projects allow modification, the easiest way is <strong>not</strong> to use data extraction through pixels on the screen.</p>
 <p>Use <a href="https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system" target="_blank" rel="noopener noreferrer">WebSockets</a> instead.</p>
@@ -186,6 +200,11 @@ which can be considered privacy-intrusive 👎.</li>
 <div><p><span><div class="hai_tag_ZcC4 hai_tag_requires_resonite_AvzK">⚡ <span class="notranslate">Resonite</span></div></span><span><div class="hai_tag_ZcC4 hai_tag_requires_basis_QHoe">🔺 <span class="notranslate">Basis</span></div></span><span><div class="hai_tag_ZcC4 hai_tag_requires_chilloutvr_mrre">🌆 <span class="notranslate">ChilloutVR</span></div></span></p></div>
 <p>If you are using <em>Resonite</em>, or if you are modifying <em>ChilloutVR</em>, or if you are making an application built using the Basis Framework,
 you should probably use <a href="https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system" target="_blank" rel="noopener noreferrer">WebSockets</a>.</p>
-<p>In the <em>Data calibration</em> tab of the software, at the bottom in the <em>Resonite WebSockets</em> section, check the box to enable the WebSocket service.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/products/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Products</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#robotic-arms" class="table-of-contents__link toc-highlight">Robotic arms</a></li><li><a href="#️-safety-warning" class="table-of-contents__link toc-highlight">⚠️ Safety warning</a></li><li><a href="#download" class="table-of-contents__link toc-highlight">Download</a><ul><li><a href="#software" class="table-of-contents__link toc-highlight">Software</a></li><li><a href="#shader" class="table-of-contents__link toc-highlight">Shader</a></li></ul></li><li><a href="#install" class="table-of-contents__link toc-highlight">Install</a><ul><li><a href="#avatar-vrchat-platform-modular-avatar" class="table-of-contents__link toc-highlight">Avatar: VRChat platform, Modular Avatar</a></li><li><a href="#avatar-vrchat-platform-vrcfury" class="table-of-contents__link toc-highlight">Avatar: VRChat platform, VRCFury</a></li><li><a href="#avatar-resonite" class="table-of-contents__link toc-highlight">Avatar: Resonite</a></li><li><a href="#avatar-chilloutvr" class="table-of-contents__link toc-highlight">Avatar: ChilloutVR</a></li><li><a href="#avatar-applications-built-using-the-basis-framework" class="table-of-contents__link toc-highlight">Avatar: Applications built using the Basis Framework</a></li></ul></li><li><a href="#run-the-software" class="table-of-contents__link toc-highlight">Run the software</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Built with Docusaurus.</div></div></div></footer></div>
+<p>In the <em>Data calibration</em> tab of the software, at the bottom in the <em>Resonite WebSockets</em> section, check the box to enable the WebSocket service.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="developer-documentation">Developer documentation<a href="#developer-documentation" class="hash-link" aria-label="Direct link to Developer documentation" title="Direct link to Developer documentation">​</a></h2>
+<p>All the documentation sections above are meant for users of the application.</p>
+<p>If you are a developer, you should consult the <a href="https://github.com/hai-vr/position-system-to-external-program/" target="_blank" rel="noopener noreferrer">README.md on GitHub</a>
+for technical information about the extraction process, the shader, the WebSockets API, and the camera position extraction.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/products/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Products</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#robotic-arms" class="table-of-contents__link toc-highlight">Robotic arms</a></li><li><a href="#️-safety-warning" class="table-of-contents__link toc-highlight">⚠️ Safety warning</a></li><li><a href="#download" class="table-of-contents__link toc-highlight">Download</a><ul><li><a href="#software" class="table-of-contents__link toc-highlight">Software</a></li><li><a href="#shader" class="table-of-contents__link toc-highlight">Shader</a></li></ul></li><li><a href="#install-the-data-encoder-shader" class="table-of-contents__link toc-highlight">Install the data encoder (shader)</a><ul><li><a href="#vrchat-avatars-sdk-using-modular-avatar" class="table-of-contents__link toc-highlight">VRChat Avatars SDK using Modular Avatar</a></li><li><a href="#vrchat-avatars-sdk-using-vrcfury" class="table-of-contents__link toc-highlight">VRChat Avatars SDK using VRCFury</a></li><li><a href="#vrchat-worlds-sdk" class="table-of-contents__link toc-highlight">VRChat Worlds SDK</a></li><li><a href="#resonite" class="table-of-contents__link toc-highlight">Resonite</a></li><li><a href="#chilloutvr" class="table-of-contents__link toc-highlight">ChilloutVR</a></li><li><a href="#applications-built-using-the-basis-framework" class="table-of-contents__link toc-highlight">Applications built using the Basis Framework</a></li></ul></li><li><a href="#run-the-software" class="table-of-contents__link toc-highlight">Run the software</a></li><li><a href="#developer-documentation" class="table-of-contents__link toc-highlight">Developer documentation</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>
