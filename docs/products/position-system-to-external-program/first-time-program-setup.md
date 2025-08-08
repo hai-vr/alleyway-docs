@@ -5,7 +5,7 @@ import {HaiTags} from "/src/components/HaiTags";
 import {HaiTag} from "/src/components/HaiTag";
 import {HaiVideo} from "/src/components/HaiVideo";
 
-# Program
+# First time program setup
 
 :::warning
 **This document is a draft and may be incomplete.**
