@@ -69,7 +69,7 @@ The shape of this cone does not get squished when you lower the hard limit, so i
 When using the Rotate machine setting, the movement in the virtual space in one direction will result in a different direction in the physical space.
 
 - This can turn a horizontal motion in the virtual space to a vertical motion in the physical space.
-- Alternatively, if you use a robotic arm which is oriented horizontally, using this setting can correct the space.
+- Alternatively, if you use a robotic arm which is oriented horizontally, using this setting can correct the space so that the virtual space and physical space match.
 
 :::warning
 This setting is located in the **Robotics (Advanced)** tab, because it is one of the most disruptive settings;

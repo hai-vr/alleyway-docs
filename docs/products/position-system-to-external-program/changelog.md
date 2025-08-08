@@ -6,6 +6,51 @@ sidebar_position: 100
 
 ---
 
+## 0.1.0-beta.6
+
+*🌕 Unity Shader changed. Avatar should be reuploaded using the newest version to benefit from some features.*
+
+### New feature: Add a maximum height hard limit option.
+
+The hard limits lower the maximum height that the robotic arm is authorized to move.
+
+When this value is changed, the virtual scale is internally compensated so that it still takes the full travel in the virtual space to move
+in the range between the hard limits. This can be disabled using the Compensate virtual scale checkbox.
+
+### New feature: Add an offset pitch option.
+
+The offset lets you tweak the pitch angle of the robotic arm after the position is applied.
+
+This does not change the direction of movement. A movement in the virtual space will lead to the same direction in the physical space.
+
+### New feature: Add a setting to rotate the robotic arm entirely.
+
+When using the Rotate machine setting, the movement in the virtual space in one direction will result in a different direction in the physical space.
+
+- This can turn a horizontal motion in the virtual space to a vertical motion in the physical space.
+- Alternatively, if you use a robotic arm which is oriented horizontally, using this setting can correct the space so that the virtual space and physical space match.
+
+### Add VRCFury prefab
+
+A VRCFury installation procedure is [documented here](https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/platform-setup#vrchat-avatars-sdk-using-vrcfury).
+
+### Other
+
+Fixes:
+- Searching for window names should be faster as it now ignores invisible windows.
+- Encoder mesh no longer has a deleted Animation component on it (Mesh asset rig "Animation Type" is now set to None).
+
+Other:
+- **The root PID controller is unstable, so it has been disabled for this release.**
+- The gizmo calibrator model material has been switched from lilToon to Standard, to avoid requiring lilToon for the prefab installation.
+- Go back to using gray pixels instead of red pixels, as we don't need to account for bloom as much. The shader version has been changed to V1.0.1 to reflect this.
+- Since WebSockets can be used beyond Resonite, all mentions of Resonite WebSockets have been changed to just WebSockets.
+- In the Debug menu, provide an estimate of the difference in scale between virtual and physical. This is meant for future work, in preparation for repositioning objects
+  in play space when the camera starts moving as a result of travel across the virtual space.
+
+
+---
+
 ## 0.1.0-beta.5
 
 *🌃 No change in Unity prefab or shader.*
