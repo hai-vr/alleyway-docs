@@ -1,13 +1,16 @@
 ﻿---
 title: Changelog
+sidebar_position: 100
 ---
 # Position System to External Program - Changelog
+
+---
 
 ## 0.1.0-beta.5
 
 *🌃 No change in Unity prefab or shader.*
-🟰🟰🟰
-Fix application can now be started without the having the ASP.NET Core runtime installed on the computer.
+
+Fix application can now be started without having the ASP.NET Core runtime installed on the computer.
 - Reimplement WebSockets service without using AspNetCore.
 
 ---
@@ -16,7 +19,7 @@ Fix application can now be started without the having the ASP.NET Core runtime i
 
 *🌕 Unity Shader changed. Avatar should be reuploaded using the newest version to benefit from some features.*
 
-### **New feature:** Add world space camera position and rotation to the data.
+### New feature: Add world space camera position and rotation to the data.
 
 The world space camera position and rotation are now encoded in the data.
 The aim of this addition is to enable an additional way to pin SteamVR overlays in world space.
@@ -32,7 +35,7 @@ Fixes:
 
 *🌃 No change in Unity prefab or shader.*
 
-### **New feature:** Add optional WebSocket service for Resonite support.
+### New feature: Add optional WebSocket service for Resonite support.
 
 The robotic arm can be controlled by sending the position and normal to a WebSocket from *Resonite*.
 The resulting robotic arm motion is still subject to the settings from the Robotics tab, as the position being sent effectively simulates the same DPS-like lights.
@@ -47,17 +50,17 @@ For more details, see the [*Websockets as an alternative input system* section i
 
 *🌃 No change in Unity prefab or shader.*
 
-### **New feature:** Add PID controllers to stabilize the robotic arm.
+### New feature: Add PID controllers to stabilize the robotic arm.
 
 The Robotics tab now has an option for a PID controller that auto-adjusts the root position
 and another PID controller to dampen the target position.
 
-### **New feature:** Add safety setting to clamp the lateral axes.
+### New feature: Add safety setting to clamp the lateral axes.
 
 The Robotics tab now has a safety mode that limits the lateral movement to a circle.
 The circle is shorter at the bottommost than at the topmost.
 
-### **New feature:** Add custom virtual scale setting.
+### New feature: Add custom virtual scale setting.
 
 The Robotics tab now has sliders to change the scale of the virtual world.
 A larger value means it takes more travel in the virtual space to cause the same amount of travel in the physical space.
@@ -77,7 +80,7 @@ Other:
 
 ## 0.1.0-beta.1
 
-### **New feature:** Connect the position of standard DPS-like lights to a robotic arm.
+### New feature: Connect the position of standard DPS-like lights to a robotic arm.
 
 This is the initial beta.
 
