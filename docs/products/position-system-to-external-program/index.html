@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Position System to External Program | Alleyway</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Position System to External Program | Alleyway"><meta data-rh="true" name="description" content="Position System to External Program is a shader and a program that lets you connect the position of standard DPS-like lights"><meta data-rh="true" property="og:description" content="Position System to External Program is a shader and a program that lets you connect the position of standard DPS-like lights"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"><link data-rh="true" rel="alternate" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/" hreflang="en"><link data-rh="true" rel="alternate" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Products","item":"https://alleyway.hai-vr.dev/docs/products/"},{"@type":"ListItem","position":2,"name":"Position System to External Program","item":"https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"}]}</script><link rel="stylesheet" href="/assets/css/styles.7396b508.css">
-<script src="/assets/js/runtime~main.b9300f60.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6d372a67.js" defer="defer"></script>
 <script src="/assets/js/main.79aca19a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -16,13 +16,16 @@
 to a robotic arm.</p>
 <p>Other users may be able to remotely control the position and rotation of your robotic arm through a shared virtual space.</p>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p><strong>This document is a draft and may be incomplete.</strong></p><p>This application is planned for release sometime in August, so check this documentation again in a few days.</p></div></div>
-<p>This is achieved by encoding pixels to the window screen or the image that is projected into the HMD, and our program then reads those pixels.<br>
-There is no modification to the computer program nor active process. There is no OSC either.</p>
+<p>This is achieved by encoding pixels to the window screen or the image that is projected into the HMD. Our program then reads those pixels.<br>
+Data extraction is done using <strong>harmless screen capture</strong> techniques similar to window and VR live-streaming.
+There is no tampering of the computer program nor any active process. There is no OSC either.</p>
 <p>In addition:</p>
 <ul>
 <li>The position and rotation of the camera in world space is also extracted. This could be used to pin SteamVR overlays in world space.</li>
 <li>This optionally exposes a WebSocket service to enable direct control of the robotic arm from virtual space systems like Resonite.</li>
 </ul>
+<video controls="" muted="" width="816"><source src="https://large.docs.cdn.hai-vr.dev/assets/docs/ILX73J2vHu-f.mp4"></video>
+<p><em>The data extraction method is similar to screen captures, which is completely harmless.</em></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="robotic-arms">Robotic arms<a href="#robotic-arms" class="hash-link" aria-label="Direct link to Robotic arms" title="Direct link to Robotic arms">​</a></h2>
 <p>As of currently, this software is known to function with the following robotic arms:</p>
 <table><thead><tr><th>Vendor</th><th>Model</th><th>Protocol</th><th>Communication mode</th><th>Tested</th></tr></thead><tbody><tr><td>Tempest MAx</td><td>SR6</td><td>T-code</td><td>Serial port</td><td>❓️</td></tr><tr><td>Tempest MAx</td><td>OSR2</td><td>T-code</td><td>Serial port</td><td>❓</td></tr></tbody></table>
@@ -144,12 +147,12 @@ which is released under the MIT License.</p>
 <li>This mesh is special and must not be converted or simplified.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="vrchat-worlds-sdk">VRChat Worlds SDK<a href="#vrchat-worlds-sdk" class="hash-link" aria-label="Direct link to VRChat Worlds SDK" title="Direct link to VRChat Worlds SDK">​</a></h3>
-<div class="theme-admonition theme-admonition-danger admonition_xJq3 alert alert--danger"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path></svg></span>danger</div><div class="admonitionContent_BuS1"><p>🚫 <strong>Integrating the data encoder part of the system is not recommended in worlds.</strong></p><p>This is because the shader material may need to be customized by the user to fix alignment issues within the HMD.</p></div></div>
+<div class="theme-admonition theme-admonition-danger admonition_xJq3 alert alert--danger"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path></svg></span>danger</div><div class="admonitionContent_BuS1"><p>🚫 <strong>We advise against integrating the shader data encoder system in worlds.</strong></p><p>This is because the shader material may need to be customized by the user to fix alignment issues within the HMD.</p></div></div>
 <p>There is no support for worlds. However, consider the following:</p>
 <p>DPS-like lights are not limited to avatars. If you want a world to control a robotic arm, you may be able
 to use the same DPS-like light setup.</p>
 <p>Also, we support <a href="https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system" target="_blank" rel="noopener noreferrer">WebSockets</a>;
-you could optionally build a log parser that submits commands to the WebSocket.</p>
+If you&#x27;re building a world for yourself, you could also create a log parser that submits commands to the WebSocket.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="resonite">Resonite<a href="#resonite" class="hash-link" aria-label="Direct link to Resonite" title="Direct link to Resonite">​</a></h3>
 <div><p><span><div class="hai_tag_ZcC4 hai_tag_requires_resonite_AvzK">⚡ <span class="notranslate">Resonite</span></div></span></p></div>
 <p>Resonite has support for Websockets, which can be used to extract a position and normal.</p>
@@ -158,6 +161,7 @@ you could optionally build a log parser that submits commands to the WebSocket.<
 <li>The text message string needs to be formatted as specified in the <a href="https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system" target="_blank" rel="noopener noreferrer">WebSockets</a> documentation.</li>
 <li>Pass a position (e.g., local transform, or global transform) in a given coordinate space.</li>
 <li>Pass a direction (e.g., something like Up or Forward direction) in the same coordinate space as the position.</li>
+<li><em>Optionally, you can also pass a tangent (e.g., something like Up or Forward direction), which should be perpendicular to the direction. We don&#x27;t use that information yet, but this could be later used to control the twist.</em></li>
 </ul>
 <p>When using the software, you will need to enable the WebSockets service as it is off by default. This is explained later in this documentation.</p>
 <p>We do not currently provide a readily usable ProtoFlux item at this time. Use the picture below as a reference for a possible implementation.</p>
