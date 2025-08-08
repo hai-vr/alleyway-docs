@@ -21,12 +21,16 @@ Other users may be able to remotely control the position and rotation of your ro
 This application is planned for release sometime in August, so check this documentation again in a few days.
 :::
 
-This is achieved by encoding pixels to the window screen or the image that is projected into the HMD, and our program then reads those pixels.<br/>
-There is no modification to the computer program nor active process. There is no OSC either.
+This is achieved by encoding pixels to the window screen or the image that is projected into the HMD. Our program then reads those pixels.<br/>
+Data extraction is done using **harmless screen capture** techniques similar to window and VR live-streaming.
+There is no tampering of the computer program nor any active process. There is no OSC either.
 
 In addition:
 - The position and rotation of the camera in world space is also extracted. This could be used to pin SteamVR overlays in world space.
 - This optionally exposes a WebSocket service to enable direct control of the robotic arm from virtual space systems like Resonite.
+
+<HaiVideo src="./img/ILX73J2vHu-f.mp4"></HaiVideo>
+*The data extraction method is similar to screen captures, which is completely harmless.*
 
 ## Robotic arms
 
@@ -173,7 +177,7 @@ If you use an avatar optimization tool that merges meshes, exclude this object:
 ### VRChat Worlds SDK
 
 :::danger
-🚫 **Integrating the data encoder part of the system is not recommended in worlds.**
+🚫 **We advise against integrating the shader data encoder system in worlds.**
 
 This is because the shader material may need to be customized by the user to fix alignment issues within the HMD.
 :::
@@ -184,7 +188,7 @@ DPS-like lights are not limited to avatars. If you want a world to control a rob
 to use the same DPS-like light setup.
 
 Also, we support [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system);
-you could optionally build a log parser that submits commands to the WebSocket.
+If you're building a world for yourself, you could also create a log parser that submits commands to the WebSocket.
 
 ### Resonite
 
@@ -198,6 +202,7 @@ Create a *WebsocketClient* component in an object. Use a *Websocket Text Message
 - The text message string needs to be formatted as specified in the [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system) documentation.
 - Pass a position (e.g., local transform, or global transform) in a given coordinate space.
 - Pass a direction (e.g., something like Up or Forward direction) in the same coordinate space as the position.
+- *Optionally, you can also pass a tangent (e.g., something like Up or Forward direction), which should be perpendicular to the direction. We don't use that information yet, but this could be later used to control the twist.*
 
 When using the software, you will need to enable the WebSockets service as it is off by default. This is explained later in this documentation.
 
