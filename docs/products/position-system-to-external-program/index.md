@@ -136,10 +136,12 @@ If you have Modular Avatar, this is the recommended method. If you do not have M
 In the avatar:
 - Add the *PositionSystemToExternalProgram-VRC-MA* prefab to your avatar root.
 
+![Unity_vBn2gPNKzq.png](img/Unity_vBn2gPNKzq.png)
+
 You may customize the setup further, the following steps are optional:
-- If you want to change the menu location, there is an *MA Menu Installer* component in `(prefab)/System/MA-MenuInstaller`
+- If you want to change the menu location, there is an *MA Menu Installer* component in `(prefab)/System`
 - By default, the calibration origin will be on the right hand.
-  - You can choose to switch it to your left hand using the *MA Bone Proxy* component located on `(prefab)/System/HandRoot`.
+  - You can choose to switch it to your left hand using the *Armature Link* component located on `(prefab)/System/HandRoot`.
   - It is not obvious whether you should define it as your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
   - Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
 
@@ -153,22 +155,24 @@ If you use an avatar optimization tool that merges meshes, exclude this object:
 <HaiTag requiresVRChat={true} short={true} />
 </HaiTags>
 
-I do not have VRCFury installed, and I am not familiar enough with its components; here are the things you need to know to adapt this prefab to VRCFury:
+:::note
+I don't use VRCFury for my own projects, and I am not familiar enough with its components. Nevertheless, I have tentatively built the VRCFury prefab
+based on the Modular Avatar prefab using equivalent components.
+
+However, I cannot guarantee that the VRCFury prefab has been set up correctly.
+:::
 
 In the avatar:
-- Add the *PositionSystemToExternalProgram-VRC-MA* prefab to your avatar root.
-- Probably using *Full Controller*, manage to do the following:
-  - Merge the animator located within the *Animator* component with paths relative to the `(prefab)/System` object, which is in:
-    - *`Packages/Alleyway - Position System to External Program/Internal/Animator/PositionSystemToExternalProgram-Animator.asset`*
-  - Integrate the expression menu asset, which is in:
-    - *`Packages/Alleyway - Position System to External Program/Internal/PositionSystemToExternalProgram-Menu.asset`*
-  - Integrate the expression parameters asset, which is in:
-    - *`Packages/Alleyway - Position System to External Program/Internal/PositionSystemToExternalProgram-Parameters.asset`*
-- Probably using *Armature Link* bone reparenting function, or just through reparenting, manage to do the following:
-  - Make `(prefab)/System/HandRoot` reparented to one of your hands, which will be used for calibrating the origin.
-    - It is not obvious whether you should define it as your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
-    - Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
-  - Make `(prefab)/System/NeckRoot` reparented to your neck bone.
+- Add the *PositionSystemToExternalProgram-VRC-VRCFury* prefab to your avatar root.
+
+![5bbBMWuP85.png](img/5bbBMWuP85.png)
+
+You may customize the setup further, the following steps are optional:
+- If you want to change the menu location, there is a *Full Controller* component in  `(prefab)/System/MA-MenuInstaller`
+- By default, the calibration origin will be on the right hand.
+  - You can choose to switch it to your left hand using the *MA Bone Proxy* component located on `(prefab)/System/HandRoot`.
+  - It is not obvious whether you should define it as your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
+  - Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
 
 If you use an avatar optimization tool that merges meshes, exclude this object:
 - `(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PositionSystemToExternalProgramEncoder-Mesh`
@@ -196,7 +200,7 @@ If you're building a world for yourself, you could also create a log parser that
 <HaiTag requiresResonite={true} short={true} />
 </HaiTags>
 
-Resonite has support for Websockets, which can be used to extract a position and normal.
+Resonite has support for WebSockets, which can be used to extract a position and normal.
 
 Create a *WebsocketClient* component in an object. Use a *Websocket Text Message Sender* node to send a text message.
 - The text message string needs to be formatted as specified in the [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system) documentation.
@@ -223,7 +227,15 @@ We do not currently have installation instructions for ChilloutVR.
 
 If you are more familiar with ChilloutVR, please reach out on the [temporary Alleyway Discord server](https://discord.gg/3VzveJQYWE).
 
-Consult the VRCFury instructions above as a reference to what each GameObject does; it will give you an insight of how to convert this prefab.
+The following will give you an insight of how to convert this prefab.
+
+Object structure:
+- Make `(prefab)/System/HandRoot` reparented to one of your hands, which will be used for calibrating the origin.
+  - It is not obvious whether you should define it as your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
+  - Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
+- Make `(prefab)/System/NeckRoot` reparented to your neck bone.
+
+Component manipulation/Animation:
 - The encoder mesh that uses the shader needs to be visible only to the person who has the computer connected to the robotic arm (avatar wearer,
   or the user who spawned the item).
 - There are constraints that need to be converted back to Unity systems, along with its animations; a prefab may be provided in the future for this purpose.
@@ -282,6 +294,10 @@ If you are using *Resonite*, or if you are modifying *ChilloutVR*, or if you are
 you should probably use [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
 
 In the *Data calibration* tab of the software, at the bottom in the *Resonite WebSockets* section, check the box to enable the WebSocket service.
+
+#### Where are the program config files saved?
+
+The config files are saved in the `C:/Users/user_name/AppData/Roaming/PositionSystemToExternalProgram/` folder.
 
 ---
 
