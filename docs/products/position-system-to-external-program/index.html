@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Position System to External Program | Alleyway</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Position System to External Program | Alleyway"><meta data-rh="true" name="description" content="Position System to External Program is a shader and a program that lets you connect the position of standard DPS-like lights"><meta data-rh="true" property="og:description" content="Position System to External Program is a shader and a program that lets you connect the position of standard DPS-like lights"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"><link data-rh="true" rel="alternate" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/" hreflang="en"><link data-rh="true" rel="alternate" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Products","item":"https://alleyway.hai-vr.dev/docs/products/"},{"@type":"ListItem","position":2,"name":"Position System to External Program","item":"https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"}]}</script><link rel="stylesheet" href="/assets/css/styles.7396b508.css">
-<script src="/assets/js/runtime~main.af985380.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0b08944a.js" defer="defer"></script>
 <script src="/assets/js/main.305a2a0d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -39,9 +39,9 @@ which is an imperfect system.</p>
 <p>When using a position system through a shared virtual space, <strong>the motion of the robotic arm will not benefit from these safeties</strong>.
 Carefully consider the following risks:</p>
 <ul>
-<li>If the entity controlling the position of your robotic arm suffers from loss of tracking, the robotic arm may treat that loss of tracking as a position to reach.</li>
-<li>If the entity controlling the position of your robotic arm moves too fast, the robotic arm may attempt to reach that position faster than the motors are capable of,
-which will result in unexpected angles from your robotic arm. The more degrees of freedom your device has, the more likely this is going to happen.</li>
+<li>If the entity or person controlling the position of your robotic arm suffers from loss of tracking, the robotic arm may treat that loss of tracking as a position to reach.</li>
+<li>If the entity or person controlling the position of your robotic arm moves too fast, the robotic arm may attempt to reach that position faster than the motors are capable of.
+This will result in unexpected angles from your robotic arm during the travel. The more degrees of freedom your device has, the more likely this is going to happen.</li>
 <li>In addition, the firmware and hardware will be subjected to positions that may be considered unusual by traditional software, and therefore those positions may be less tested.
 These unusual positions could cause damage to your robotic arm or reveal bugs in the firmware that may compromise the expected position of the robotic arm.</li>
 </ul>
@@ -78,12 +78,20 @@ which is released under the MIT License.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="install-the-data-encoder-shader">Install the data encoder (shader)<a href="#install-the-data-encoder-shader" class="hash-link" aria-label="Direct link to Install the data encoder (shader)" title="Direct link to Install the data encoder (shader)">​</a></h2>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p><strong>This document is a draft and may be incomplete.</strong></p><p>This application is planned for release sometime in August, so check this documentation again in a few days.</p></div></div>
 <p>As a reminder, only the <strong>computer connected</strong> to the robotic arm needs the software and the shader.</p>
-<p>The other users in the virtual space do not need it, they just need a standard DPS-like light.</p>
-<p>This project does not provide those DPS-like lights.</p>
+<p>The other users in the virtual space do not need it, they just need a standard DPS-like light.
+This project does not provide those DPS-like lights.</p>
+<p>Choose one of the sections below:</p>
+<ul>
+<li><a href="#vrchat-avatars-sdk-using-modular-avatar"><strong>VRChat</strong> Avatars SDK using Modular Avatar</a></li>
+<li><a href="#vrchat-avatars-sdk-using-vrcfury"><strong>VRChat</strong> Avatars SDK using VRCFury</a></li>
+<li><a href="#resonite"><strong>Resonite</strong></a></li>
+<li><a href="#chilloutvr"><strong>ChilloutVR</strong></a></li>
+<li><a href="#applications-built-using-the-basis-framework">Applications built using the <strong>Basis</strong> framework</a></li>
+</ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="vrchat-avatars-sdk-using-modular-avatar">VRChat Avatars SDK using Modular Avatar<a href="#vrchat-avatars-sdk-using-modular-avatar" class="hash-link" aria-label="Direct link to VRChat Avatars SDK using Modular Avatar" title="Direct link to VRChat Avatars SDK using Modular Avatar">​</a></h3>
 <div><p><span><div class="hai_tag_ZcC4 hai_tag_requires_vrchat_kYpu">💬 <span class="notranslate">VRChat</span></div></span></p></div>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>If you have Modular Avatar, this is the recommended method. If you do not have Modular Avatar, but you have VRCFury, <a href="#vrchat-avatars-sdk-using-vrcfury">see the other section below</a>.<br>
-<strong>You must have at least one of those two.</strong></p></div></div>
+<strong>You must have at least one of those two.</strong></p><p><em>Also, SPS lights are DPS-like lights. They will work with this position system.</em></p></div></div>
 <p>In the avatar:</p>
 <ul>
 <li>Add the <em>PositionSystemToExternalProgram-VRC-MA</em> prefab to your avatar root.</li>
@@ -108,7 +116,7 @@ which is released under the MIT License.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="vrchat-avatars-sdk-using-vrcfury">VRChat Avatars SDK using VRCFury<a href="#vrchat-avatars-sdk-using-vrcfury" class="hash-link" aria-label="Direct link to VRChat Avatars SDK using VRCFury" title="Direct link to VRChat Avatars SDK using VRCFury">​</a></h3>
 <div><p><span><div class="hai_tag_ZcC4 hai_tag_requires_vrchat_kYpu">💬 <span class="notranslate">VRChat</span></div></span></p></div>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>I don&#x27;t use VRCFury for my own projects, and I am not familiar enough with its components. Nevertheless, I have tentatively built the VRCFury prefab
-based on the Modular Avatar prefab using equivalent components.</p><p>However, I cannot guarantee that the VRCFury prefab has been set up correctly.</p></div></div>
+based on the Modular Avatar prefab using equivalent components.</p><p>However, I cannot guarantee that the VRCFury prefab has been set up correctly.</p><p><em>Also, SPS lights are DPS-like lights. They will work with this position system.</em></p></div></div>
 <p>In the avatar:</p>
 <ul>
 <li>Add the <em>PositionSystemToExternalProgram-VRC-VRCFury</em> prefab to your avatar root.</li>
@@ -179,10 +187,40 @@ or the user who spawned the item).</li>
 <p>Since Basis projects allow modification, the easiest way is <strong>not</strong> to use data extraction through pixels on the screen.</p>
 <p>Use <a href="https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system" target="_blank" rel="noopener noreferrer">WebSockets</a> instead.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="run-the-software">Run the software<a href="#run-the-software" class="hash-link" aria-label="Direct link to Run the software" title="Direct link to Run the software">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="start-the-program">Start the program<a href="#start-the-program" class="hash-link" aria-label="Direct link to Start the program" title="Direct link to Start the program">​</a></h3>
 <p>If you don&#x27;t have it already, download .NET 7.0 Runtime &quot;Run console apps&quot; <a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime" target="_blank" rel="noopener noreferrer">https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime</a></p>
+<p>Then, start <code>position-system.exe</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="start-your-game">Start your game<a href="#start-your-game" class="hash-link" aria-label="Direct link to Start your game" title="Direct link to Start your game">​</a></h3>
 <ul>
-<li>Start <code>position-system.exe</code>.</li>
+<li>If you aren&#x27;t in VR already, start the game of your choice in VR mode and load the avatar or item that you have set up.</li>
+<li>You should be in VR mode, because we need to make sure the HMD texture is calibrated.</li>
+<li>Go to your in-game menu and:<!-- -->
+<ul>
+<li>Toggle <strong>Enable</strong> ON.</li>
+<li>Hold the <strong>Bring to Hand</strong> button down.</li>
+</ul>
+</li>
+</ul>
+<p>If everything went well, the left eye of the HMD should now have a strip of pixels displayed within it.</p>
+<p>TODO: Add illustration.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="calibrate-the-data">Calibrate the data<a href="#calibrate-the-data" class="hash-link" aria-label="Direct link to Calibrate the data" title="Direct link to Calibrate the data">​</a></h3>
+<p>This only needs to be done once.</p>
+<p>If you use XSOverlay or OVR Toolkit:</p>
+<ul>
+<li>Open an overlay window to our program.</li>
+<li>Switch to the <em>Data calibration</em> tab.</li>
+<li>TODO</li>
+</ul>
+<p>If you do not:</p>
+<ul>
+<li>Go out of VR for a bit and <strong>do not enter the SteamVR menu</strong>. You must have the game active in the foreground of the VR headset.</li>
+<li>In our program, switch to the <em>Data calibration</em> tab.</li>
+<li>TODO</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="drive-the-robotic-arm">Drive the robotic arm<a href="#drive-the-robotic-arm" class="hash-link" aria-label="Direct link to Drive the robotic arm" title="Direct link to Drive the robotic arm">​</a></h3>
+<ul>
 <li>Connect your device through USB.</li>
+<li>Power on your robotic arm.</li>
 <li>Click <em>Connect to device on serial port COM...</em>
 <ul>
 <li>If you have multiple serial port devices selected, select the correct one beforehand using the dropdown (COM3, COM4, ...).</li>
@@ -192,7 +230,7 @@ or the user who spawned the item).</li>
 </ul>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>If you made it this far into this draft documentation, you may want to know there is a <strong>new temporary Discord server</strong> here for early troubleshooting:
 <a href="https://discord.gg/3VzveJQYWE" target="_blank" rel="noopener noreferrer">https://discord.gg/3VzveJQYWE</a></p></div></div>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="method">Method<a href="#method" class="hash-link" aria-label="Direct link to Method" title="Direct link to Method">​</a></h4>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="method">Method<a href="#method" class="hash-link" aria-label="Direct link to Method" title="Direct link to Method">​</a></h3>
 <div><p><span><div class="hai_tag_ZcC4 hai_tag_requires_vrchat_kYpu">💬 <span class="notranslate">VRChat</span></div></span><span><div class="hai_tag_ZcC4 hai_tag_requires_chilloutvr_mrre">🌆 <span class="notranslate">ChilloutVR</span></div></span></p></div>
 <p>To extract data, we provide three methods:</p>
 <ul>
@@ -206,7 +244,7 @@ or the user who spawned the item).</li>
 which can be considered privacy-intrusive 👎.</li>
 <li>In non-VR, you can extract data from a window.</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="websockets">WebSockets<a href="#websockets" class="hash-link" aria-label="Direct link to WebSockets" title="Direct link to WebSockets">​</a></h4>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="websockets">WebSockets<a href="#websockets" class="hash-link" aria-label="Direct link to WebSockets" title="Direct link to WebSockets">​</a></h3>
 <div><p><span><div class="hai_tag_ZcC4 hai_tag_requires_resonite_AvzK">⚡ <span class="notranslate">Resonite</span></div></span><span><div class="hai_tag_ZcC4 hai_tag_requires_basis_QHoe">🔺 <span class="notranslate">Basis</span></div></span><span><div class="hai_tag_ZcC4 hai_tag_requires_chilloutvr_mrre">🌆 <span class="notranslate">ChilloutVR</span></div></span></p></div>
 <p>If you are using <em>Resonite</em>, or if you are modifying <em>ChilloutVR</em>, or if you are making an application built using the Basis framework,
 you should probably use <a href="https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system" target="_blank" rel="noopener noreferrer">WebSockets</a>.</p>
@@ -217,6 +255,6 @@ you should probably use <a href="https://github.com/hai-vr/position-system-to-ex
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="developer-documentation">Developer documentation<a href="#developer-documentation" class="hash-link" aria-label="Direct link to Developer documentation" title="Direct link to Developer documentation">​</a></h2>
 <p>All the documentation sections above are meant for users of the application.</p>
 <p>If you are a developer, you should consult the <a href="https://github.com/hai-vr/position-system-to-external-program/" target="_blank" rel="noopener noreferrer">README.md on GitHub</a>
-for technical information about the extraction process, the shader, the WebSockets API, and the camera position extraction.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/products/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Products</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/products/position-system-to-external-program/changelog"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Changelog</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#robotic-arms" class="table-of-contents__link toc-highlight">Robotic arms</a></li><li><a href="#️-safety-warning" class="table-of-contents__link toc-highlight">⚠️ Safety warning</a></li><li><a href="#️-fire-hazard" class="table-of-contents__link toc-highlight">⚠️ Fire hazard</a></li><li><a href="#download" class="table-of-contents__link toc-highlight">Download</a><ul><li><a href="#software" class="table-of-contents__link toc-highlight">Software</a></li><li><a href="#shader" class="table-of-contents__link toc-highlight">Shader</a></li></ul></li><li><a href="#install-the-data-encoder-shader" class="table-of-contents__link toc-highlight">Install the data encoder (shader)</a><ul><li><a href="#vrchat-avatars-sdk-using-modular-avatar" class="table-of-contents__link toc-highlight">VRChat Avatars SDK using Modular Avatar</a></li><li><a href="#vrchat-avatars-sdk-using-vrcfury" class="table-of-contents__link toc-highlight">VRChat Avatars SDK using VRCFury</a></li><li><a href="#vrchat-worlds-sdk" class="table-of-contents__link toc-highlight">VRChat Worlds SDK</a></li><li><a href="#resonite" class="table-of-contents__link toc-highlight">Resonite</a></li><li><a href="#chilloutvr" class="table-of-contents__link toc-highlight">ChilloutVR</a></li><li><a href="#applications-built-using-the-basis-framework" class="table-of-contents__link toc-highlight">Applications built using the Basis framework</a></li></ul></li><li><a href="#run-the-software" class="table-of-contents__link toc-highlight">Run the software</a></li><li><a href="#developer-documentation" class="table-of-contents__link toc-highlight">Developer documentation</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Built with Docusaurus.</div></div></div></footer></div>
+for technical information about the extraction process, the shader, the WebSockets API, and the camera position extraction.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/products/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Products</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/products/position-system-to-external-program/changelog"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Changelog</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#robotic-arms" class="table-of-contents__link toc-highlight">Robotic arms</a></li><li><a href="#️-safety-warning" class="table-of-contents__link toc-highlight">⚠️ Safety warning</a></li><li><a href="#️-fire-hazard" class="table-of-contents__link toc-highlight">⚠️ Fire hazard</a></li><li><a href="#download" class="table-of-contents__link toc-highlight">Download</a><ul><li><a href="#software" class="table-of-contents__link toc-highlight">Software</a></li><li><a href="#shader" class="table-of-contents__link toc-highlight">Shader</a></li></ul></li><li><a href="#install-the-data-encoder-shader" class="table-of-contents__link toc-highlight">Install the data encoder (shader)</a><ul><li><a href="#vrchat-avatars-sdk-using-modular-avatar" class="table-of-contents__link toc-highlight">VRChat Avatars SDK using Modular Avatar</a></li><li><a href="#vrchat-avatars-sdk-using-vrcfury" class="table-of-contents__link toc-highlight">VRChat Avatars SDK using VRCFury</a></li><li><a href="#vrchat-worlds-sdk" class="table-of-contents__link toc-highlight">VRChat Worlds SDK</a></li><li><a href="#resonite" class="table-of-contents__link toc-highlight">Resonite</a></li><li><a href="#chilloutvr" class="table-of-contents__link toc-highlight">ChilloutVR</a></li><li><a href="#applications-built-using-the-basis-framework" class="table-of-contents__link toc-highlight">Applications built using the Basis framework</a></li></ul></li><li><a href="#run-the-software" class="table-of-contents__link toc-highlight">Run the software</a><ul><li><a href="#start-the-program" class="table-of-contents__link toc-highlight">Start the program</a></li><li><a href="#start-your-game" class="table-of-contents__link toc-highlight">Start your game</a></li><li><a href="#calibrate-the-data" class="table-of-contents__link toc-highlight">Calibrate the data</a></li><li><a href="#drive-the-robotic-arm" class="table-of-contents__link toc-highlight">Drive the robotic arm</a></li><li><a href="#method" class="table-of-contents__link toc-highlight">Method</a></li><li><a href="#websockets" class="table-of-contents__link toc-highlight">WebSockets</a></li></ul></li><li><a href="#developer-documentation" class="table-of-contents__link toc-highlight">Developer documentation</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>
