@@ -55,9 +55,9 @@ which is an imperfect system.
 
 When using a position system through a shared virtual space, **the motion of the robotic arm will not benefit from these safeties**.
 Carefully consider the following risks:
-- If the entity controlling the position of your robotic arm suffers from loss of tracking, the robotic arm may treat that loss of tracking as a position to reach.
-- If the entity controlling the position of your robotic arm moves too fast, the robotic arm may attempt to reach that position faster than the motors are capable of,
-which will result in unexpected angles from your robotic arm. The more degrees of freedom your device has, the more likely this is going to happen.
+- If the entity or person controlling the position of your robotic arm suffers from loss of tracking, the robotic arm may treat that loss of tracking as a position to reach.
+- If the entity or person controlling the position of your robotic arm moves too fast, the robotic arm may attempt to reach that position faster than the motors are capable of.
+This will result in unexpected angles from your robotic arm during the travel. The more degrees of freedom your device has, the more likely this is going to happen.
 - In addition, the firmware and hardware will be subjected to positions that may be considered unusual by traditional software, and therefore those positions may be less tested.
 These unusual positions could cause damage to your robotic arm or reveal bugs in the firmware that may compromise the expected position of the robotic arm.
 
@@ -119,8 +119,14 @@ This application is planned for release sometime in August, so check this docume
 As a reminder, only the **computer connected** to the robotic arm needs the software and the shader.
 
 The other users in the virtual space do not need it, they just need a standard DPS-like light.
-
 This project does not provide those DPS-like lights.
+
+Choose one of the sections below:
+- [**VRChat** Avatars SDK using Modular Avatar](#vrchat-avatars-sdk-using-modular-avatar)
+- [**VRChat** Avatars SDK using VRCFury](#vrchat-avatars-sdk-using-vrcfury)
+- [**Resonite**](#resonite)
+- [**ChilloutVR**](#chilloutvr)
+- [Applications built using the **Basis** framework](#applications-built-using-the-basis-framework)
 
 ### VRChat Avatars SDK using Modular Avatar
 
@@ -131,6 +137,8 @@ This project does not provide those DPS-like lights.
 :::info
 If you have Modular Avatar, this is the recommended method. If you do not have Modular Avatar, but you have VRCFury, [see the other section below](#vrchat-avatars-sdk-using-vrcfury).<br/>
 **You must have at least one of those two.**
+
+*Also, SPS lights are DPS-like lights. They will work with this position system.*
 :::
 
 In the avatar:
@@ -160,6 +168,8 @@ I don't use VRCFury for my own projects, and I am not familiar enough with its c
 based on the Modular Avatar prefab using equivalent components.
 
 However, I cannot guarantee that the VRCFury prefab has been set up correctly.
+
+*Also, SPS lights are DPS-like lights. They will work with this position system.*
 :::
 
 In the avatar:
@@ -254,21 +264,53 @@ Use [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?
 
 ## Run the software
 
+### Start the program
+
 If you don't have it already, download .NET 7.0 Runtime "Run console apps" https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime
 
-- Start `position-system.exe`.
+Then, start `position-system.exe`.
+
+### Start your game
+
+- If you aren't in VR already, start the game of your choice in VR mode and load the avatar or item that you have set up.
+- You should be in VR mode, because we need to make sure the HMD texture is calibrated.
+- Go to your in-game menu and:
+  - Toggle **Enable** ON.
+  - Hold the **Bring to Hand** button down.
+
+If everything went well, the left eye of the HMD should now have a strip of pixels displayed within it.
+
+TODO: Add illustration.
+
+### Calibrate the data
+
+This only needs to be done once.
+
+If you use XSOverlay or OVR Toolkit:
+- Open an overlay window to our program.
+- Switch to the *Data calibration* tab.
+- TODO
+
+If you do not:
+- Go out of VR for a bit and **do not enter the SteamVR menu**. You must have the game active in the foreground of the VR headset.
+- In our program, switch to the *Data calibration* tab.
+- TODO
+
+### Drive the robotic arm
+
 - Connect your device through USB.
+- Power on your robotic arm.
 - Click *Connect to device on serial port COM...*
   - If you have multiple serial port devices selected, select the correct one beforehand using the dropdown (COM3, COM4, ...).
   - *If you own a 3D printer connected over USB, please make sure you don't select its serial port. Turn off your 3D printer if you're not sure.*
-  
 
 :::info
 If you made it this far into this draft documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:
 https://discord.gg/3VzveJQYWE
 :::
 
-#### Method
+### Method
+
 <HaiTags>
 <HaiTag requiresVRChat={true} short={true} />
 <HaiTag requiresChilloutVR={true} short={true} />
@@ -282,7 +324,7 @@ To extract data, we provide three methods:
   which can be considered privacy-intrusive 👎.
 - In non-VR, you can extract data from a window.
 
-#### WebSockets
+### WebSockets
 
 <HaiTags>
 <HaiTag requiresResonite={true} short={true} />
