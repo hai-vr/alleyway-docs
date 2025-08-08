@@ -16,7 +16,9 @@ to a robotic arm.
 Other users may be able to remotely control the position and rotation of your robotic arm through a shared virtual space.
 
 :::warning
-This document is a draft and may be incomplete.
+**This document is a draft and may be incomplete.**
+
+This application is planned for release sometime in August, so check this documentation again in a few days.
 :::
 
 This is achieved by encoding pixels to the window screen or the image that is projected into the HMD, and our program then reads those pixels.<br/>
@@ -60,6 +62,19 @@ for all parties**.
 
 **You are solely responsible for your own personal safety.**
 
+## ⚠️ Fire hazard
+
+Some low-quality servos can burn out and short-circuit closed, causing parts of the robotic arm to heat up even beyond the glass transition temperature 
+of some 3D-printed materials. This can pose a fire hazard.
+
+Keep an eye out on your device and **power it off when not in use**. Do not fall asleep while your device is still powered on.
+
+:::danger
+If you're going to build your own robotic arm, **do not buy any of the cheap 20kg/cm garbage red servos**. Those are notorious for burning out.
+
+![servo_burn.jpg](img/servo_burn.jpg)
+:::
+
 ## Download
 
 As a reminder, only the **computer connected** to the robotic arm needs the software and the shader.
@@ -92,7 +107,9 @@ To download the shader prefab:
 ## Install the data encoder (shader)
 
 :::warning
-This document is a draft and may be incomplete.
+**This document is a draft and may be incomplete.**
+
+This application is planned for release sometime in August, so check this documentation again in a few days.
 :::
 
 As a reminder, only the **computer connected** to the robotic arm needs the software and the shader.
@@ -106,6 +123,11 @@ This project does not provide those DPS-like lights.
 <HaiTags>
 <HaiTag requiresVRChat={true} short={true} />
 </HaiTags>
+
+:::info
+If you have Modular Avatar, this is the recommended method. If you do not have Modular Avatar, but you have VRCFury, [see the other section below](#vrchat-avatars-sdk-using-vrcfury).<br/>
+**You must have at least one of those two.**
+:::
 
 In the avatar:
 - Add the *PositionSystemToExternalProgram-VRC-MA* prefab to your avatar root.
@@ -150,14 +172,19 @@ If you use an avatar optimization tool that merges meshes, exclude this object:
 
 ### VRChat Worlds SDK
 
-🚫 Integrating the data encoder part of the system is not recommended in worlds.
-This is because the shader material may need to be customized by the user to fix alignment issues within the HMD.
+:::danger
+🚫 **Integrating the data encoder part of the system is not recommended in worlds.**
 
-However, remember that DPS-like lights are not limited to avatars. If you want a world to control a robotic arm, you may be able
+This is because the shader material may need to be customized by the user to fix alignment issues within the HMD.
+:::
+
+There is no support for worlds. However, consider the following:
+
+DPS-like lights are not limited to avatars. If you want a world to control a robotic arm, you may be able
 to use the same DPS-like light setup.
 
 Also, we support [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system);
-you could optionally build a log parser that submits commands to the WebSocker.
+you could optionally build a log parser that submits commands to the WebSocket.
 
 ### Resonite
 
@@ -192,12 +219,13 @@ We do not currently have installation instructions for ChilloutVR.
 If you are more familiar with ChilloutVR, please reach out on the [temporary Alleyway Discord server](https://discord.gg/3VzveJQYWE).
 
 Consult the VRCFury instructions above as a reference to what each GameObject does; it will give you an insight of how to convert this prefab.
-
-There are constraints that need to be converted back to Unity systems, along with its animations; a prefab may be provided in the future for this purpose.
+- The encoder mesh that uses the shader needs to be visible only to the person who has the computer connected to the robotic arm (avatar wearer,
+  or the user who spawned the item).
+- There are constraints that need to be converted back to Unity systems, along with its animations; a prefab may be provided in the future for this purpose.
 
 If you can modify ChilloutVR, you may also look into using [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
 
-### Applications built using the Basis Framework
+### Applications built using the Basis framework
 
 <HaiTags>
 <HaiTag requiresBasis={true} short={true} />
@@ -245,7 +273,7 @@ To extract data, we provide three methods:
 <HaiTag requiresChilloutVR={true} short={true} />
 </HaiTags>
 
-If you are using *Resonite*, or if you are modifying *ChilloutVR*, or if you are making an application built using the Basis Framework,
+If you are using *Resonite*, or if you are modifying *ChilloutVR*, or if you are making an application built using the Basis framework,
 you should probably use [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
 
 In the *Data calibration* tab of the software, at the bottom in the *Resonite WebSockets* section, check the box to enable the WebSocket service.
