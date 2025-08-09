@@ -142,6 +142,7 @@ Here are the instructions:
 A prefab has been tentatively added.
 
 - Add the *PositionSystemToExternalProgram-ChilloutVR* prefab to your avatar root.
+- It **must** be at the avatar root. **Do not rename** the prefab object. The animations depend on it.
 
 ![Unity_XEqPy4mBCe.png](img/Unity_XEqPy4mBCe.png)
 
@@ -154,7 +155,6 @@ In you want to unpack the prefab:
 
 :::note
 If you want to do this without unpacking the prefab, then do the following instead:
-- Add the prefab to your avatar root.
 - **Create a duplicate of** the HandRoot and NeckRoot objects to your hand bone and neck bone respectively.
   - It is not obvious whether you should assign the HandRoot to your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
   - Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
