@@ -6,15 +6,54 @@ sidebar_position: 100
 
 ---
 
+## 0.2.0-beta.1
+
+💥 *BREAKING CHANGE: The previous package needs to be removed before installing this new one. Asset GUIDs do not change. Some prefab names change.*
+
+🌕 *Prefab changed. Avatar should be reuploaded using the newest version to benefit from some features.*
+
+**This release contains a breaking change.**
+
+The package name has been shortened to `dev.hai-vr.alleyway.position-system`. This means you must uninstall the previous package before installing this one.
+
+The asset GUIDs do not change, but some prefab names have changed.
+
+The major version does not change because this product has not yet been officially advertised for release.
+
+### Add ChilloutVR prefab base
+
+A ChilloutVR installation procedure is [documented here](https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/platform-setup#chilloutvr).
+
+### Other
+
+Breaking changes:
+- BREAKING: Package name has been shortened to dev.hai-vr.alleyway.position-system.
+- BREAKING: Rename prefabs to shorten their name.
+- BREAKING: In prefab, shorten mesh encoder name.
+- BREAKING: Separate ChilloutVR and VRChat assets to separate folders.
+- BREAKING: Rename and move many assets to different folders.
+- Due to change in object names:
+  - ChilloutVR absolute path animations have been re-generated.
+  - VRChat relative path animations have been re-generated.
+
+Other:
+- A preview mesh has been added to help the user with scaling the system depending on the avatar height.
+- Put the menu in a submenu.
+- Menu now have icons.
+- GitHub Releases will now include a .unitypackage file.
+
+
+---
+
 ## 0.1.0-beta.7
 
 🌃 *No change in Unity prefab or shader.*
 
-## Add ChilloutVR prefab base
+### Add ChilloutVR prefab base
 
 A ChilloutVR installation procedure is [documented here](https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/platform-setup#chilloutvr).
 
-## Other
+### Other
 
 - GitHub Releases will now include a .unitypackage file.
 

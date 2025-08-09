@@ -38,7 +38,7 @@ If you have Modular Avatar, this is the recommended method. If you do not have M
 :::
 
 In the avatar:
-- Add the *PositionSystemToExternalProgram-VRC-MA* prefab to your avatar root.
+- Add the *PositionSystem-VRC-MA* prefab to your avatar root.
 
 ![Unity_vBn2gPNKzq.png](img/Unity_vBn2gPNKzq.png)
 
@@ -50,7 +50,7 @@ You may customize the setup further, the following steps are optional:
     - Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
 
 If you use an avatar optimization tool that merges meshes, exclude this object:
-- `(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PositionSystemToExternalProgramEncoder-Mesh`
+- `(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PStoEP-Encoder`
 - This mesh is special and must not be converted or simplified.
 
 ## VRChat Avatars SDK using VRCFury
@@ -69,7 +69,7 @@ However, I cannot guarantee that the VRCFury prefab has been set up correctly.
 :::
 
 In the avatar:
-- Add the *PositionSystemToExternalProgram-VRC-VRCFury* prefab to your avatar root.
+- Add the *PositionSystem-VRC-VRCFury* prefab to your avatar root.
 
 ![5bbBMWuP85.png](img/5bbBMWuP85.png)
 
@@ -81,7 +81,7 @@ You may customize the setup further, the following steps are optional:
     - Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
 
 If you use an avatar optimization tool that merges meshes, exclude this object:
-- `(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PositionSystemToExternalProgramEncoder-Mesh`
+- `(prefab)/System/CalibrationConstraint/LocalOnly-Toggled/Parent-ReferenceScale/Parent-Rescaled/PStoEP-Encoder`
 - This mesh is special and must not be converted or simplified.
 
 ## VRChat Worlds SDK
@@ -141,7 +141,7 @@ Here are the instructions:
 
 A prefab has been tentatively added.
 
-- Add the *PositionSystemToExternalProgram-ChilloutVR* prefab to your avatar root.
+- Add the *PositionSystem-ChilloutVR* prefab to your avatar root.
 - It **must** be at the avatar root. **Do not rename** the prefab object. The animations depend on it.
 
 ![Unity_XEqPy4mBCe.png](img/Unity_XEqPy4mBCe.png)
@@ -165,8 +165,8 @@ If you want to do this without unpacking the prefab, then do the following inste
 :::
 
 Set up your animator:
-- In the Project view, go to `Packages/Alleyway - Position System to External Program/Internal/Animator/Animator-ChilloutVR/Animator-ChilloutVR-AbsolutePaths/`
-- Open the `PositionSystemToExternalProgram-Animator-CVR-Absolute.controller` animator controller asset file,
+- In the Project view, go to `Packages/Alleyway - Position System/Internal/App-ChilloutVR/AbsolutePaths/`
+- Open the `PositionSystem-Animator-CVR-Absolute.controller` animator controller asset file,
 - Copy the two layers to your own animator.
 
 Set up your *CVR Avatar* component:
