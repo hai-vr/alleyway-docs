@@ -7,14 +7,6 @@ The Robotics tab lets you customize the behavior of your robotic arm during use.
 
 Depending on what you're doing, you may have to tweak those settings live.
 
-
-:::warning
-This setting is located in the **Robotics (Advanced)** tab, because it is one of the most disruptive settings;
-The virtual space and the physical space will no longer agree on the directions.
-
-If you think something is strange with the machine behavior, press the Reset button. This will set the rotation back to 0.
-:::
-
 ## Virtual scale
 
 The virtual scale changes the amount of movement required in the virtual space to produce the same amount
@@ -89,6 +81,13 @@ The shape of this cone does not get squished when you lower the hard limit, so i
 :::
 
 ## Rotate machine
+
+:::warning
+This setting is located in the **Robotics (Advanced)** tab, because it is one of the most disruptive settings;
+The virtual space and the physical space will no longer agree on the directions.
+
+If you think something is strange with the machine behavior, press the Reset button. This will set the rotation back to 0.
+:::
 
 When using the Rotate machine setting, the movement in the virtual space in one direction will result in a different direction in the physical space.
 
