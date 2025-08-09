@@ -8,7 +8,7 @@ sidebar_position: 100
 
 ## 0.1.0-beta.6
 
-*🌕 Unity Shader changed. Avatar should be reuploaded using the newest version to benefit from some features.*
+🌕 *Unity Shader changed. Avatar should be reuploaded using the newest version to benefit from some features.*
 
 ### New feature: Add a maximum height hard limit option.
 
@@ -53,7 +53,7 @@ Other:
 
 ## 0.1.0-beta.5
 
-*🌃 No change in Unity prefab or shader.*
+🌃 *No change in Unity prefab or shader.*
 
 Fix application can now be started without having the ASP.NET Core runtime installed on the computer.
 - Reimplement WebSockets service without using AspNetCore.
@@ -62,7 +62,7 @@ Fix application can now be started without having the ASP.NET Core runtime insta
 
 ## 0.1.0-beta.4
 
-*🌕 Unity Shader changed. Avatar should be reuploaded using the newest version to benefit from some features.*
+🌕 *Unity Shader changed. Avatar should be reuploaded using the newest version to benefit from some features.*
 
 ### New feature: Add world space camera position and rotation to the data.
 
@@ -78,7 +78,7 @@ Fixes:
 
 ## 0.1.0-beta.3
 
-*🌃 No change in Unity prefab or shader.*
+🌃 *No change in Unity prefab or shader.*
 
 ### New feature: Add optional WebSocket service for Resonite support.
 
@@ -93,7 +93,7 @@ For more details, see the [*Websockets as an alternative input system* section i
 
 ## 0.1.0-beta.2
 
-*🌃 No change in Unity prefab or shader.*
+🌃 *No change in Unity prefab or shader.*
 
 ### New feature: Add PID controllers to stabilize the robotic arm.
 

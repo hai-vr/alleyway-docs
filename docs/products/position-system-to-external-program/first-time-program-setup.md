@@ -7,6 +7,8 @@ import {HaiVideo} from "/src/components/HaiVideo";
 
 # First time program setup
 
+When starting the program for the first time, you will need to set it up to verify that it works.
+
 :::warning
 **This document is a draft and may be incomplete.**
 
@@ -86,6 +88,10 @@ you should probably use [WebSockets](https://github.com/hai-vr/position-system-t
 
 In the *Data calibration* tab of the software, at the bottom in the *Resonite WebSockets* section, check the box to enable the WebSocket service.
 
-### Where are the program config files saved?
+## Where are the program config files saved?
 
 The config files are saved in the `C:/Users/user_name/AppData/Roaming/PositionSystemToExternalProgram/` folder.
+
+## What next?
+
+Consult the [Robotics tab](./robotics-tab) documentation.
