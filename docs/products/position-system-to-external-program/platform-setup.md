@@ -147,20 +147,20 @@ A prefab has been tentatively added.
 
 In you want to unpack the prefab:
 - Unpack the prefab.
-- Move the HandRoot and NeckRoot objects to your hand bone\* and neck bone respectively,
+- Move the HandRoot and NeckRoot objects to your hand bone\* and neck bone respectively.
+  - It is not obvious whether you should assign the HandRoot to your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
+  - Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
 - Set their local position to zero.
-
-\*About the hand bone:
-- It is not obvious whether you should define it as your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
-- Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
 
 :::note
 If you want to do this without unpacking the prefab, then do the following instead:
 - Add the prefab to your avatar root.
-- **Create a duplicate of** the HandRoot and NeckRoot objects to your hand bone and neck bone respectively,
+- **Create a duplicate of** the HandRoot and NeckRoot objects to your hand bone and neck bone respectively.
+  - It is not obvious whether you should assign the HandRoot to your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
+  - Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
 - Set their local position to zero.
-- In the prefab, locate the `(prefab)/System/CalibrationConstraint`,
-- In the *Position Constraint* component, reassign the constraint source to your new HandRoot object,
+- In the prefab, locate the `(prefab)/System/CalibrationConstraint`.
+- In the *Position Constraint* component, reassign the constraint source to your new HandRoot object.
 - In the *Aim Constraint* component, reassign the constraint source to your new NeckRoot object.
 :::
 
