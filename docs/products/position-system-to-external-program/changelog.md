@@ -6,6 +6,20 @@ sidebar_position: 100
 
 ---
 
+## 0.1.0-beta.7
+
+🌃 *No change in Unity prefab or shader.*
+
+## Add ChilloutVR prefab base
+
+A ChilloutVR installation procedure is [documented here](https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/platform-setup#chilloutvr).
+
+## Other
+
+- GitHub Releases will now include a .unitypackage file.
+
+---
+
 ## 0.1.0-beta.6
 
 🌕 *Unity Shader changed. Avatar should be reuploaded using the newest version to benefit from some features.*
