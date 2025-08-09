@@ -189,7 +189,7 @@ Object structure:
 Component manipulation/Animation:
 - The encoder mesh that uses the shader needs to be visible only to the person who has the computer connected to the robotic arm (avatar wearer,
   or the user who spawned the item).
-- There are constraints that need to be converted back to Unity systems, along with its animations; a prefab may be provided in the future for this purpose.
+- There are constraints that have been converted to Unity systems, along with its animations. The animation logic is different in ChilloutVR because it is using the world object prefab trick.
 
 If you can modify ChilloutVR, you may also look into using [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
 :::
