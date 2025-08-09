@@ -110,6 +110,17 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {from: '/docs/products/position-system-to-external-program/changelogs', to: '/docs/products/position-system-to-external-program/changelog'},
+        ]
+      }
+    ]
+  ]
 };
 
 export default config;
