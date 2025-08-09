@@ -133,9 +133,50 @@ For example, this should only run on the computer connected to the robotics arm,
 <HaiTag requiresChilloutVR={true} short={true} />
 </HaiTags>
 
-We do not currently have installation instructions for ChilloutVR.
+:::danger
+The ChilloutVR prefab is not currently working properly.
 
-If you are more familiar with ChilloutVR, please reach out on the [temporary Alleyway Discord server](https://discord.gg/3VzveJQYWE).
+Here are the instructions:
+:::
+
+A prefab has been tentatively added.
+
+- Add the *PositionSystemToExternalProgram-ChilloutVR* prefab to your avatar root.
+
+![Unity_XEqPy4mBCe.png](img/Unity_XEqPy4mBCe.png)
+
+In you want to unpack the prefab:
+- Unpack the prefab.
+- Move the HandRoot and NeckRoot objects to your hand bone\* and neck bone respectively,
+- Set their local position to zero.
+
+\*About the hand bone:
+- It is not obvious whether you should define it as your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
+- Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
+
+:::note
+If you want to do this without unpacking the prefab, then do the following instead:
+- Add the prefab to your avatar root.
+- **Create a duplicate of** the HandRoot and NeckRoot objects to your hand bone and neck bone respectively,
+- Set their local position to zero.
+- In the prefab, locate the `(prefab)/System/CalibrationConstraint`,
+- In the *Position Constraint* component, reassign the constraint source to your new HandRoot object,
+- In the *Aim Constraint* component, reassign the constraint source to your new NeckRoot object.
+:::
+
+Set up your animator:
+- In the Project view, go to `Packages/Alleyway - Position System to External Program/Internal/Animator/Animator-ChilloutVR/Animator-ChilloutVR-AbsolutePaths/`
+- Open the `PositionSystemToExternalProgram-Animator-CVR-Absolute.controller` animator controller asset file,
+- Copy the two layers to your own animator.
+
+Set up your *CVR Avatar* component:
+- In Advanced Settings:
+  - Add a Toggle of type Float called *Enabled* that toggles the parameter `PStoEP_Enabled`
+  - Add a Toggle of type Float called *Enabled and Visible* that toggles the parameter `PStoEP_EnabledAndVisible`
+  - Add a Toggle of type Float called *Bring to Hand* that toggles the parameter `PStoEP_BringToHand`
+
+:::info[Additional information for advanced ChilloutVR users]
+*If you are more familiar with ChilloutVR, please reach out on the [temporary Alleyway Discord server](https://discord.gg/3VzveJQYWE).*
 
 The following will give you an insight of how to convert this prefab.
 
@@ -151,6 +192,7 @@ Component manipulation/Animation:
 - There are constraints that need to be converted back to Unity systems, along with its animations; a prefab may be provided in the future for this purpose.
 
 If you can modify ChilloutVR, you may also look into using [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
+:::
 
 ## Applications built using the Basis framework
 
