@@ -1,9 +1,9 @@
 ﻿---
 sidebar_position: 50
 ---
-# Robotics tab
+# Robotics settings
 
-The Robotics tab lets you customize the behavior of your robotic arm during use.
+The Robotics settings lets you customize the behavior of your robotic arm during use.
 
 Depending on what you're doing, you may have to tweak those settings live.
 
