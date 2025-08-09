@@ -94,4 +94,4 @@ The config files are saved in the `C:/Users/user_name/AppData/Roaming/PositionSy
 
 ## What next?
 
-Consult the [Robotics tab](./robotics-tab) documentation.
+Consult the [Robotics tab](./robotics-settings) documentation.
