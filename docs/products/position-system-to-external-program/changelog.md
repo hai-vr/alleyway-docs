@@ -6,6 +6,23 @@ sidebar_position: 100
 
 ---
 
+## 1.0.0-beta.1
+
+Include licenses in the compiled program files and add a README.txt file in the software.
+
+Prepare software for public release.
+
+Other:
+- Change the default VR coordinates to (1, 1) instead of (0, 0).
+
+Fixes:
+- Remove Animator component from ChilloutVR prefab.
+- Fix ChilloutVR constraints did not work in Unity 2021 because they were saved in Unity 2022.
+- Fix Rotate machine did not update immediately.
+- Make the preview model less confusing.
+
+---
+
 ## 0.2.0-beta.1
 
 💥 *BREAKING CHANGE: The previous package needs to be removed before installing this new one. Asset GUIDs do not change. Some prefab names change.*

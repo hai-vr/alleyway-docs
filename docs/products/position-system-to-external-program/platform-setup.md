@@ -7,14 +7,11 @@ import {HaiVideo} from "/src/components/HaiVideo";
 
 # Set up the avatar
 
-As a reminder, only the **computer connected** to the robotic arm needs the software and the shader.
+:::tip
+Only the **computer connected** to the robotic arm needs the software and the prefab. The other users in the virtual space do not need it,
+they just need a standard DPS-like light.
 
-The other users in the virtual space do not need it, they just need a standard DPS-like light. This project does not provide those DPS-like lights.
-
-:::warning
-**This document is a draft and may be incomplete.**
-
-This application is planned for release sometime in August, so check this documentation again in a few days.
+If they already have a standard DPS-like light such as SPS, then they can control your robotic arm, no additional setup needed from them.
 :::
 
 Choose one of the sections below depending on your platform or application:
@@ -114,7 +111,7 @@ Create a *WebsocketClient* component in an object. Use a *Websocket Text Message
 - Pass a direction (e.g., something like Up or Forward direction) in the same coordinate space as the position.
 - *Optionally, you can also pass a tangent (e.g., something like Up or Forward direction), which should be perpendicular to the direction. We don't use that information yet, but this could be later used to control the twist.*
 
-When using the software, you will need to enable the WebSockets service as it is OFF by default. This is explained later in this documentation.
+When using the software, [you will need to enable the WebSockets service as it is OFF by default](developer#websockets).
 
 We do not currently provide a readily usable ProtoFlux item at this time. Use the picture below as a reference for a possible implementation.
 

@@ -7,12 +7,6 @@ import {HaiVideo} from "/src/components/HaiVideo";
 
 # First time calibration
 
-:::warning
-**This document is a draft and may be incomplete.**
-
-This application is planned for release sometime in August, so check this documentation again in a few days.
-:::
-
 When starting the program for the first time, you will need to set it up to verify that it works.
 
 ## Start the program

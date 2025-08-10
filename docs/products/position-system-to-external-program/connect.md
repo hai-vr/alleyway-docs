@@ -7,12 +7,6 @@ import {HaiVideo} from "/src/components/HaiVideo";
 
 # Connect the robotic arm
 
-:::warning
-**This document is a draft and may be incomplete.**
-
-This application is planned for release sometime in August, so check this documentation again in a few days.
-:::
-
 - Connect your device through USB.
 - Power on your robotic arm.
 - Click *Connect to device on serial port COM...*

@@ -31,3 +31,5 @@ you should probably use [WebSockets](https://github.com/hai-vr/position-system-t
 In the *Data calibration* tab of the software, at the bottom in the *Resonite WebSockets* section, check the box to enable the WebSocket service.
 
 You can find the [WebSockets message specification here](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system).
+
+![position-system_CUz03IfbdR.png](img/position-system_CUz03IfbdR.png)

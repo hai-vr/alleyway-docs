@@ -7,14 +7,11 @@ import {HaiVideo} from "/src/components/HaiVideo";
 
 # Install
 
-As a reminder, only the **computer connected** to the robotic arm needs the software and the shader.
+:::tip
+Only the **computer connected** to the robotic arm needs the software and the prefab. The other users in the virtual space do not need it,
+they just need a standard DPS-like light.
 
-The other users in the virtual space do not need it, they just need a standard DPS-like light. This project does not provide those DPS-like lights.
-
-:::warning
-**This document is a draft and may be incomplete.**
-
-This application is planned for release sometime in August, so check this documentation again in a few days.
+If they already have a standard DPS-like light such as SPS, then they can control your robotic arm, no additional setup needed from them.
 :::
 
 ## Download software
@@ -25,16 +22,21 @@ The software can be downloaded at this location:
 
 If you don't have it already, download .NET 7.0 Runtime "Run console apps" https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime
 
-You can [audit the software source code on GitHub](https://github.com/hai-vr/position-system-to-external-program/) if you are a developer.
+*You can [audit the software source code on GitHub](https://github.com/hai-vr/position-system-to-external-program/) if you are a developer.*
 
-## Download shader and prefab
+:::info
+If you made it this far into this documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:
+https://discord.gg/3VzveJQYWE
+:::
+
+## Download prefab
 
 <HaiTags>
 <HaiTag requiresVRChat={true} short={true} />
 <HaiTag requiresChilloutVR={true} short={true} />
 </HaiTags>
 
-To download the shader prefab:
+To download the prefab:
 - Add the **Alleyway [ALCOM listing](vcc://vpm/addRepo?url=https://hai-vr.github.io/alleyway-listing/index.json)** to your repositories.
     - `https://hai-vr.github.io/alleyway-listing/index.json`
 - Add the *Alleyway - Position System to External Program* package to your project.
