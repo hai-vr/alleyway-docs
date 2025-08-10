@@ -44,3 +44,11 @@ To download the prefab:
 Alternatively, you could get the .unitpackage file here:
 
 - Download **[1.0.0 .unitypackage (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/1.0.0/dev.hai-vr.alleyway.position-system-1.0.0.unitypackage)**
+
+## Resonite
+
+<HaiTags>
+<HaiTag requiresResonite={true} short={true} />
+</HaiTags>
+
+Nothing to download yet. Read the [avatar setup documentation for a possible ProtoFlux setup](./platform-setup#resonite). 
