@@ -59,3 +59,8 @@ If the error *Checksum is Failing* appears in red, check the following:
         </div>
     </div>
 </div>
+
+:::info
+You may want to know there is a **new temporary Discord server** here for early troubleshooting:
+https://discord.gg/3VzveJQYWE
+:::
