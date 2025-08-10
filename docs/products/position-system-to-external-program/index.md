@@ -28,12 +28,6 @@ If they already have a standard DPS-like light such as SPS, then they can contro
 
 ## How is it done?
 
-:::warning
-**This document is a draft and may be incomplete.**
-
-This application is planned for release sometime in August, so check this documentation again in a few days.
-:::
-
 This is achieved by encoding pixels to the window screen or the image that is projected into the HMD using a special shader.
 Our program then reads those pixels.
 

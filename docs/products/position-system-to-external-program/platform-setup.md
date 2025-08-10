@@ -41,6 +41,7 @@ In the avatar:
 ![Unity_vBn2gPNKzq.png](img/Unity_vBn2gPNKzq.png)
 
 You may customize the setup further, the following steps are optional:
+- You can rescale the *System* object. The length of the yellow rods is approximately the total travel length of the robotic arm.
 - If you want to change the menu location, there is an *MA Menu Installer* component in `(prefab)/System`
 - By default, the calibration origin will be on the right hand.
     - You can choose to switch it to your left hand using the *Armature Link* component located on `(prefab)/System/HandRoot`.
@@ -73,6 +74,7 @@ In the avatar:
 ![5bbBMWuP85.png](img/5bbBMWuP85.png)
 
 You may customize the setup further, the following steps are optional:
+- You can rescale the *System* object. The length of the yellow rods is approximately the total travel length of the robotic arm.
 - If you want to change the menu location, there is a *Full Controller* component in  `(prefab)/System/MA-MenuInstaller`
 - By default, the calibration origin will be on the right hand.
     - You can choose to switch it to your left hand using the *Armature Link* component located on `(prefab)/System/HandRoot`.
@@ -174,6 +176,9 @@ Set up your *CVR Avatar* component:
   - Add a Toggle of type Float called *Enabled* that toggles the parameter `PStoEP_Enabled`
   - Add a Toggle of type Float called *Enabled and Visible* that toggles the parameter `PStoEP_EnabledAndVisible`
   - Add a Toggle of type Float called *Bring to Hand* that toggles the parameter `PStoEP_BringToHand`
+
+Optionally:
+- You can rescale the *System* object. The length of the yellow rods is approximately the total travel length of the robotic arm.
 
 :::info[Additional information for advanced ChilloutVR users]
 *If you are more familiar with ChilloutVR, please reach out on the [temporary Alleyway Discord server](https://discord.gg/3VzveJQYWE).*
