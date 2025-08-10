@@ -14,3 +14,9 @@ import {HaiVideo} from "/src/components/HaiVideo";
     - *If you own a 3D printer connected over USB, please make sure you don't select its serial port. Turn off your 3D printer if you're not sure.*
 
 <HaiVideo src="./img/position-system_oXuowuZshv.mp4"></HaiVideo>
+
+:::note
+Even if USB has successfully connected, make sure your robotic arm is switched ON.
+
+Some devices can connect to USB with fans spinning even if the rest of the machine is still powered OFF.
+:::
