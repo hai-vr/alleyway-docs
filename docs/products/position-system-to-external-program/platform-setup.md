@@ -110,6 +110,7 @@ If you're building a world for yourself, you could also create a log parser that
 Resonite has support for WebSockets, which can be used to extract a position and normal.
 
 Create a *WebsocketClient* component in an object. Use a *Websocket Text Message Sender* node to send a text message.
+- We will expose a websocket on port **56247** at url `ws://localhost:56247/ws`
 - The text message string needs to be formatted as specified in the [WebSockets](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system) documentation.
 - Pass a position (e.g., local transform, or global transform) in a given coordinate space.
 - Pass a direction (e.g., something like Up or Forward direction) in the same coordinate space as the position.
