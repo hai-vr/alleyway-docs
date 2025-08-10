@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Set up the avatar | Alleyway</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/platform-setup"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Set up the avatar | Alleyway"><meta data-rh="true" name="description" content="Only the computer connected to the robotic arm needs the software and the prefab. The other users in the virtual space do not need it,"><meta data-rh="true" property="og:description" content="Only the computer connected to the robotic arm needs the software and the prefab. The other users in the virtual space do not need it,"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/platform-setup"><link data-rh="true" rel="alternate" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/platform-setup" hreflang="en"><link data-rh="true" rel="alternate" href="https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/platform-setup" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Products","item":"https://alleyway.hai-vr.dev/docs/products/"},{"@type":"ListItem","position":2,"name":"Position System to External Program","item":"https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/"},{"@type":"ListItem","position":3,"name":"Set up the avatar","item":"https://alleyway.hai-vr.dev/docs/products/position-system-to-external-program/platform-setup"}]}</script><script src="https://plausible.io/js/script.js" defer="defer" data-domain="alleyway.hai-vr.dev"></script><link rel="stylesheet" href="/assets/css/styles.7396b508.css">
-<script src="/assets/js/runtime~main.b3b72760.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.d59b87f1.js" defer="defer"></script>
 <script src="/assets/js/main.11594229.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -34,6 +34,7 @@ they just need a standard DPS-like light.</p><p>If they already have a standard 
 <p><img decoding="async" loading="lazy" alt="Unity_vBn2gPNKzq.png" src="/assets/images/Unity_vBn2gPNKzq-ff8b8ad30368c423590267917313fc18.png" width="657" height="452" class="img_ev3q"></p>
 <p>You may customize the setup further, the following steps are optional:</p>
 <ul>
+<li>You can rescale the <em>System</em> object. The length of the yellow rods is approximately the total travel length of the robotic arm.</li>
 <li>If you want to change the menu location, there is an <em>MA Menu Installer</em> component in <code>(prefab)/System</code></li>
 <li>By default, the calibration origin will be on the right hand.<!-- -->
 <ul>
@@ -60,6 +61,7 @@ based on the Modular Avatar prefab using equivalent components.</p><p>However, I
 <p><img decoding="async" loading="lazy" alt="5bbBMWuP85.png" src="/assets/images/5bbBMWuP85-63d0c473e372ca4a7d4f1533694c8226.png" width="671" height="447" class="img_ev3q"></p>
 <p>You may customize the setup further, the following steps are optional:</p>
 <ul>
+<li>You can rescale the <em>System</em> object. The length of the yellow rods is approximately the total travel length of the robotic arm.</li>
 <li>If you want to change the menu location, there is a <em>Full Controller</em> component in  <code>(prefab)/System/MA-MenuInstaller</code></li>
 <li>By default, the calibration origin will be on the right hand.<!-- -->
 <ul>
@@ -144,6 +146,10 @@ don&#x27;t copy it.</p><p>For example, this should only run on the computer conn
 <li>Add a Toggle of type Float called <em>Bring to Hand</em> that toggles the parameter <code>PStoEP_BringToHand</code></li>
 </ul>
 </li>
+</ul>
+<p>Optionally:</p>
+<ul>
+<li>You can rescale the <em>System</em> object. The length of the yellow rods is approximately the total travel length of the robotic arm.</li>
 </ul>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Additional information for advanced ChilloutVR users</div><div class="admonitionContent_BuS1"><p><em>If you are more familiar with ChilloutVR, please reach out on the <a href="https://discord.gg/3VzveJQYWE" target="_blank" rel="noopener noreferrer">temporary Alleyway Discord server</a>.</em></p><p>The following will give you an insight of how to convert this prefab.</p><p>Object structure:</p><ul>
 <li>Make <code>(prefab)/System/HandRoot</code> reparented to one of your hands, which will be used for calibrating the origin.<!-- -->
