@@ -134,7 +134,7 @@ For example, this should only run on the computer connected to the robotics arm,
 </HaiTags>
 
 :::danger
-The ChilloutVR prefab is not currently working properly.
+The ChilloutVR prefab is not currently working properly. There's some kind of issue with merging the animator controller.
 
 Here are the instructions:
 :::
@@ -167,7 +167,7 @@ If you want to do this without unpacking the prefab, then do the following inste
 Set up your animator:
 - In the Project view, go to `Packages/Alleyway - Position System/Internal/App-ChilloutVR/AbsolutePaths/`
 - Open the `PositionSystem-Animator-CVR-Absolute.controller` animator controller asset file,
-- Copy the two layers to your own animator.
+- Copy the two layers to your own animator, including the parameters and the value of the parameters **(TODO: How to do this???)**.
 
 Set up your *CVR Avatar* component:
 - In Advanced Settings:
