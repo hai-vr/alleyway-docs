@@ -43,8 +43,7 @@ The hard limits **lower the maximum height** that the robotic arm is authorized 
 When this value is changed, the virtual scale is internally compensated so that it still takes the full travel
 in the virtual space to move in the range between the hard limits. This can be disabled using the *Compensate virtual scale* checkbox.
 
-Those limits do not squish the scale vertically. A movement in the virtual space will always lead to the same proportional amount of
-movement in all three axes of motion.
+Those limits do not squish the scale vertically.
 
 ![hasm_thumbnail_71b6434e-e78b-40f6-b02f-1838e58b6acb.png](img/hasm_thumbnail_71b6434e-e78b-40f6-b02f-1838e58b6acb.png)
 
