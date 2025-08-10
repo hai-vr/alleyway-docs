@@ -47,7 +47,7 @@ As of currently, this software is known to function with the following robotic a
 
 | Vendor      | Model | Protocol | Communication mode | Notes                                                                                              |
 |-------------|-------|----------|--------------------|:---------------------------------------------------------------------------------------------------|
-| Tempest MAx | OSR2  | T-code   | Serial port        |                                                                                                    |
+| Tempest MAx | OSR2+ | T-code   | Serial port        |                                                                                                    |
 | Tempest MAx | SR6   | T-code   | Serial port        | ⚠️ Please read:<br/>[Patching the SR6 firmware](./firmware-patches#patching-the-sr6-firmware-file) |
 
 :::info
