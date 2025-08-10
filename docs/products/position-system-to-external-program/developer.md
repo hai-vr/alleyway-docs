@@ -30,6 +30,8 @@ you should probably use [WebSockets](https://github.com/hai-vr/position-system-t
 
 In the *Data calibration* tab of the software, at the bottom in the *Resonite WebSockets* section, check the box to enable the WebSocket service.
 
+![position-system_CUz03IfbdR.png](img/position-system_CUz03IfbdR.png)
+
 You can find the [WebSockets message specification here](https://github.com/hai-vr/position-system-to-external-program/?tab=readme-ov-file#websockets-as-an-alternative-input-system):
 
 > If *WebSockets* support is enabled, we will expose a websocket on port **56247** at url `ws://localhost:56247/ws`
@@ -46,6 +48,3 @@ You can find the [WebSockets message specification here](https://github.com/hai-
 > PositionSystemInterpreted PositionX PositionY PositionZ NormalX NormalY NormalZ TangentX TangentY TangentZ
 > ```
 > - *TangentX*, *TangentY*, *TangentZ* is the tangent (which is a vector perpendicular to the direction), represented as a vector of length 1. It doesn't matter if you don't make it length 1, we will normalize it anyway.
-
-
-![position-system_CUz03IfbdR.png](img/position-system_CUz03IfbdR.png)
