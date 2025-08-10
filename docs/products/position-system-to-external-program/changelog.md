@@ -6,6 +6,14 @@ sidebar_position: 100
 
 ---
 
+## 1.0.0
+
+Official release.
+
+*The source code is identical to 1.0.0-beta.1, only rebuilt with the new version number.*
+
+---
+
 ## 1.0.0-beta.1
 
 - 🌃 *No change in VRChat prefab or shader.*
