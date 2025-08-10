@@ -5,7 +5,7 @@ import {HaiTags} from "/src/components/HaiTags";
 import {HaiTag} from "/src/components/HaiTag";
 import {HaiVideo} from "/src/components/HaiVideo";
 
-# Avatar platform setup
+# Set up the avatar
 
 As a reminder, only the **computer connected** to the robotic arm needs the software and the shader.
 
@@ -114,7 +114,7 @@ Create a *WebsocketClient* component in an object. Use a *Websocket Text Message
 - Pass a direction (e.g., something like Up or Forward direction) in the same coordinate space as the position.
 - *Optionally, you can also pass a tangent (e.g., something like Up or Forward direction), which should be perpendicular to the direction. We don't use that information yet, but this could be later used to control the twist.*
 
-When using the software, you will need to enable the WebSockets service as it is off by default. This is explained later in this documentation.
+When using the software, you will need to enable the WebSockets service as it is OFF by default. This is explained later in this documentation.
 
 We do not currently provide a readily usable ProtoFlux item at this time. Use the picture below as a reference for a possible implementation.
 

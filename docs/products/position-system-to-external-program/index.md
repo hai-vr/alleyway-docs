@@ -42,6 +42,10 @@ As of currently, this software is known to function with the following robotic a
 | Tempest MAx | OSR2  | T-code   | Serial port        |                                                                                                    |
 | Tempest MAx | SR6   | T-code   | Serial port        | ⚠️ Please read:<br/>[Patching the SR6 firmware](./firmware-patches#patching-the-sr6-firmware-file) |
 
+:::info
+If your device is not listed in that table above, please [check out the FAQ](./other).
+
 Wireless is not yet supported, as we do not currently have contributing developers who own such a device.
 
-*If you are a developer, you may be able to add wireless support yourself. This project is released under the MIT License.*
+If you are a developer, you may be able to help.
+:::

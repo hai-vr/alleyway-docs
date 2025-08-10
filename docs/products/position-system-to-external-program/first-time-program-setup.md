@@ -5,9 +5,7 @@ import {HaiTags} from "/src/components/HaiTags";
 import {HaiTag} from "/src/components/HaiTag";
 import {HaiVideo} from "/src/components/HaiVideo";
 
-# First time program setup
-
-When starting the program for the first time, you will need to set it up to verify that it works.
+# First time calibration
 
 :::warning
 **This document is a draft and may be incomplete.**
@@ -15,21 +13,57 @@ When starting the program for the first time, you will need to set it up to veri
 This application is planned for release sometime in August, so check this documentation again in a few days.
 :::
 
+When starting the program for the first time, you will need to set it up to verify that it works.
+
 ## Start the program
 
 If you don't have it already, download .NET 7.0 Runtime "Run console apps" https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime
 
 Then, start `position-system.exe`.
 
-## Start your game
+## Calibrate input
 
+Please look into one of the following sections:
+- Calibrate for [**VR** usage](#vr-calibration).
+- Calibrate in [**Windowed** usage](#windowed-calibration) (not recommended if you have VR).
+- Calibrate for [**WebSockets** usage](#websockets).
+
+## VR calibration
+
+<HaiTags>
+<HaiTag requiresVRChat={true} short={true} /><HaiTag requiresChilloutVR={true} short={true} /><HaiTag requiresSteamVR={true} />
+</HaiTags>
+
+:::warning
+This requires SteamVR. If you don't use SteamVR, you'll need to use the Windowed calibration.
+
+*If you're an OpenXR developer, [you may be able to help](https://github.com/hai-vr/position-system-to-external-program/issues/1). I haven't had time to look into this yet.*
+:::
+
+You should read the entirety of those following instructions before actually doing it.
+
+The following calibration action involves looking at a window to check if it works. However, the contents of the window depend on what you see in VR.
+**Opening the SteamVR desktop window will obscure the entire screen** and cause a projection issue. You can't use the SteamVR desktop window to check if it works.
+
+My recommendation for this first time calibration is to check the desktop window by lifting your headset so that it temporarily sits on your forehead.
+
+- In the software, switch to the *Data calibration* tab.
 - If you aren't in VR already, start the game of your choice in VR mode and load the avatar or item that you have set up.
-- You should be in VR mode, because we need to make sure the HMD texture is calibrated.
+- You should be in VR, because we need to make sure the HMD texture is calibrated.
 - Go to your in-game menu and:
-    - Toggle **Enable** ON.
-    - Hold the **Bring to Hand** button down.
+  - Toggle **Enable** ON.
+  - Hold the **Bring to Hand** button down.
+- If everything went well, you should see a strip of pixels on the *Data calibration* tab.
 
-If everything went well, the left eye of the HMD should now have a strip of pixels displayed within it.
+### Troubleshooting
+
+## Windowed calibration
+
+:::warning
+If you have a VR headset, it is not recommended to start with Windowed calibration.
+
+Calibrating while Windowed is different from calibrating while in VR.
+:::
 
 TODO: Add illustration.
 
@@ -46,19 +80,6 @@ If you do not:
 - Go out of VR for a bit and **do not enter the SteamVR menu**. You must have the game active in the foreground of the VR headset.
 - In our program, switch to the *Data calibration* tab.
 - TODO
-
-## Drive the robotic arm
-
-- Connect your device through USB.
-- Power on your robotic arm.
-- Click *Connect to device on serial port COM...*
-    - If you have multiple serial port devices selected, select the correct one beforehand using the dropdown (COM3, COM4, ...).
-    - *If you own a 3D printer connected over USB, please make sure you don't select its serial port. Turn off your 3D printer if you're not sure.*
-
-:::info
-If you made it this far into this draft documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:
-https://discord.gg/3VzveJQYWE
-:::
 
 ## Method
 
@@ -80,7 +101,6 @@ To extract data, we provide three methods:
 <HaiTags>
 <HaiTag requiresResonite={true} short={true} />
 <HaiTag requiresBasis={true} short={true} />
-<HaiTag requiresChilloutVR={true} short={true} />
 </HaiTags>
 
 If you are using *Resonite*, or if you are modifying *ChilloutVR*, or if you are making an application built using the Basis framework,
@@ -88,10 +108,7 @@ you should probably use [WebSockets](https://github.com/hai-vr/position-system-t
 
 In the *Data calibration* tab of the software, at the bottom in the *Resonite WebSockets* section, check the box to enable the WebSocket service.
 
-## Where are the program config files saved?
-
-The config files are saved in the `C:/Users/user_name/AppData/Roaming/PositionSystemToExternalProgram/` folder.
-
-## What next?
-
-Consult the [Robotics tab](./robotics-settings) documentation.
+:::info
+If you made it this far into this documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:
+https://discord.gg/3VzveJQYWE
+:::

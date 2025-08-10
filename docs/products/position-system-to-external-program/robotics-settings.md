@@ -3,7 +3,13 @@ sidebar_position: 50
 ---
 # Robotics settings
 
-The Robotics settings lets you customize the behavior of your robotic arm during use.
+:::warning
+**This document is a draft and may be incomplete.**
+
+This application is planned for release sometime in August, so check this documentation again in a few days.
+:::
+
+The Robotics settings let you customize the behavior of your robotic arm during use.
 
 Depending on what you're doing, you may have to tweak those settings live.
 
