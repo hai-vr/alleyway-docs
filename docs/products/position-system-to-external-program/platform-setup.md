@@ -35,6 +35,7 @@ If you have Modular Avatar, this is the recommended method. If you do not have M
 :::
 
 In the avatar:
+- In the *Project* tab, open the *Packages/Alleyway - Position System/Prefabs/* folder.
 - Add the *PositionSystem-VRC-MA* prefab to your avatar root.
 
 ![Unity_vBn2gPNKzq.png](img/Unity_vBn2gPNKzq.png)
@@ -66,6 +67,7 @@ However, I cannot guarantee that the VRCFury prefab has been set up correctly.
 :::
 
 In the avatar:
+- In the *Project* tab, open the *Packages/Alleyway - Position System/Prefabs/* folder.
 - Add the *PositionSystem-VRC-VRCFury* prefab to your avatar root.
 
 ![5bbBMWuP85.png](img/5bbBMWuP85.png)
@@ -138,6 +140,7 @@ Here are the instructions:
 
 A prefab has been tentatively added.
 
+- In the *Project* tab, open the *Packages/Alleyway - Position System/Prefabs/* folder.
 - Add the *PositionSystem-ChilloutVR* prefab to your avatar root.
 - It **must** be at the avatar root. **Do not rename** the prefab object. The animations depend on it.
 

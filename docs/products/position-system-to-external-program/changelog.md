@@ -8,6 +8,9 @@ sidebar_position: 100
 
 ## 1.0.0-beta.1
 
+- 🌃 *No change in VRChat prefab or shader.*
+- 🌕 *ChilloutVR Prefab changed. Avatar should be reuploaded using the newest version to benefit from some features.*
+
 Include licenses in the compiled program files and add a README.txt file in the software.
 
 Prepare software for public release.
