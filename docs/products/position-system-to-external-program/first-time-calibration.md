@@ -53,3 +53,17 @@ If it doesn't look like this, or if the message **Checksum is failing** appears 
 - Make sure your SteamVR menu is not open.
 - Click the + and - buttons to shift the pixels around.
 - Check out the [next page for further troubleshooting](./fix-calibration-errors).
+
+## Alternative: Window calibration
+
+:::warning
+Window calibration works, but it is not recommended because the game will likely need to render another camera;
+also, in some contexts, using a camera can be considered privacy-intrusive.
+:::
+
+Alternatively to using SteamVR, you can also use Window calibration.
+- **Don't do this if SteamVR works out for you.**
+- In *Data calibration*, change the Extractor preference to *PrioritizeWindow*.
+- In the *Window name* field, type the start of the window name.
+  - BUG: You may need to restart the application if our program fails to detect the correct window. This will be fixed in a later version.
+- *If you use VRChat and you are in VR, change the camera to Stream camera.*
