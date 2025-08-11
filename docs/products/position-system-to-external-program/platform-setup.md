@@ -150,7 +150,7 @@ A prefab has been tentatively added.
 
 ![Unity_XEqPy4mBCe.png](img/Unity_XEqPy4mBCe.png)
 
-In you want to unpack the prefab:
+If you want to unpack the prefab:
 - Unpack the prefab.
 - Move the HandRoot and NeckRoot objects to your hand bone and neck bone respectively.
   - It is not obvious whether you should assign the HandRoot to your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
