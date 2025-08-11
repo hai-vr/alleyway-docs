@@ -136,9 +136,10 @@ For example, this should only run on the computer connected to the robotics arm,
 </HaiTags>
 
 :::danger
-The ChilloutVR prefab is not currently working properly. There's some kind of issue with merging the animator controller.
+The ChilloutVR prefab is a bit challenging to add to the avatar, you will need to merge your base animator with our animator,
+and I don't know how to do this step cleanly.
 
-Here are the instructions:
+There may be issues, so if you're going to try, hang on tight for this one.
 :::
 
 A prefab has been tentatively added.
