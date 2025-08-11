@@ -8,6 +8,7 @@ import {HaiVideo} from "/src/components/HaiVideo";
 <HaiTags>
 <HaiTag requiresVRChat={true} short={true} />
 <HaiTag requiresResonite={true} short={true} />
+<HaiTag requiresChilloutVR={true} short={true} />
 </HaiTags>
 
 *Position System to External Program* is a **prefab** and a **program** that lets you connect the position of standard DPS-like lights
