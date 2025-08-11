@@ -44,12 +44,12 @@ You don't have to do this again next time.
 - You should be in VR, because we need to make sure the HMD texture is calibrated.
 - Go to your in-game menu and:
   - Toggle **Enable** ON.
-  - Hold the **Bring to Hand** button down.
+  - Hold the **Bring to Hand** button down and release it after a second.
 - If everything went well, you should see a strip of pixels on the *Data calibration* tab.
 
 <HaiVideo src="./img/yEUYgrVMAS-f-OK.mp4" autoWidth={false} halfWidth={true} loop={true}></HaiVideo>
 
-If it doesn't look like this:
+If it doesn't look like this, or if the message **Checksum is failing** appears in read, then:
 - Make sure your SteamVR menu is not open.
 - Click the + and - buttons to shift the pixels around.
 - Check out the [next page for further troubleshooting](./fix-calibration-errors).
