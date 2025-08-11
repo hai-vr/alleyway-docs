@@ -47,17 +47,9 @@ You don't have to do this again next time.
   - Hold the **Bring to Hand** button down.
 - If everything went well, you should see a strip of pixels on the *Data calibration* tab.
 
-<div className="row">
-    <div className="col col--6 margin-bottom--lg">
-        <div className="card">
-            <div className="card__body">
 <HaiVideo src="./img/yEUYgrVMAS-f-OK.mp4" autoWidth={false} halfWidth={true} loop={true}></HaiVideo>
-<p>
-    **This is what you should be seeing.**
 
-    If it doesn't look like this, please check the [next page](./fix-calibration-errors).
-</p>
-            </div>
-        </div>
-    </div>
-</div>
+If it doesn't look like this:
+- Make sure your SteamVR menu is not open.
+- Click the + and - buttons to shift the pixels around.
+- Check out the [next page for further troubleshooting](./fix-calibration-errors).
