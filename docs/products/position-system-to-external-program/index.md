@@ -58,3 +58,6 @@ Wireless is not yet supported, as we do not currently have contributing develope
 
 If you are a developer, [you may be able to help](other#my-robotic-arm-is-not-in-that-list-how-to-add-it).
 :::
+
+<HaiVideo src="./img/resonite-position-system-f.mp4"></HaiVideo>
+*In Resonite, data is transmitted using a WebSocket instead of image data extraction.*
