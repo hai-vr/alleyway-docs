@@ -6,6 +6,16 @@ sidebar_position: 100
 
 ---
 
+## 1.0.1
+
+- 🌃 *No change in prefab or shader.*
+- 🖥️ *Program has been updated.*
+
+Fix data decoding should no longer fail in worlds with post-processing that dims the entire screen.
+- Fix checksum should no longer fail in the "for Two" world.
+
+---
+
 ## 1.0.0
 
 Official release.
