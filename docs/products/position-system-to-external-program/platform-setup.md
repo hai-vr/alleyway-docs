@@ -152,7 +152,7 @@ A prefab has been tentatively added.
 
 In you want to unpack the prefab:
 - Unpack the prefab.
-- Move the HandRoot and NeckRoot objects to your hand bone\* and neck bone respectively.
+- Move the HandRoot and NeckRoot objects to your hand bone and neck bone respectively.
   - It is not obvious whether you should assign the HandRoot to your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
   - Its child object *HandPalmDown* will be hovering under your palm, approximately at two hands' distance to your hand.
 - Set their local position to zero.
