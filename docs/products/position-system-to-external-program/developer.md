@@ -18,6 +18,11 @@ If you made it this far into this documentation, you may want to know there is a
 https://discord.gg/3VzveJQYWE
 :::
 
+## Adding support for other robotic arms
+
+Are you a developer looking to connect an unsupported robotic arm? [Check out the GitHub](https://github.com/hai-vr/position-system-to-external-program/).
+- [The **Submit()** function](https://github.com/hai-vr/position-system-to-external-program/blob/main/application-loop/Routine.cs) in `Routine.cs` is probably a good place to start.
+
 ## WebSockets
 
 <HaiTags>

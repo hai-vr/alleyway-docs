@@ -30,7 +30,7 @@ Otherwise, you're going to need the help of another developer to do this.
 I cannot add support for other devices myself as it's unlikely I will own other robotic arms like this.
 
 If you know of a developer willing to try adding support, [let them check out the GitHub](https://github.com/hai-vr/position-system-to-external-program/).
-- [The **Submit()** function](https://github.com/hai-vr/position-system-to-external-program/blob/main/application-loop/Routine.cs) in `Routine.cs` is probably a good start.
+- [The **Submit()** function](https://github.com/hai-vr/position-system-to-external-program/blob/main/application-loop/Routine.cs) in `Routine.cs` is probably a good place to start.
 
 If your device only has one axis of motion, it might be possible to add integration with *Intiface* sometime in the future.
 
