@@ -51,4 +51,4 @@ Alternatively, you could get the .unitpackage file here:
 <HaiTag requiresResonite={true} short={true} />
 </HaiTags>
 
-Nothing to download yet. Read the [avatar setup documentation for a possible ProtoFlux setup](./platform-setup#resonite). 
+There is currently no .resonitepackage for download yet. Read the [avatar setup documentation for a possible ProtoFlux setup](./platform-setup#resonite). 
