@@ -75,7 +75,7 @@ In the avatar:
 
 You may customize the setup further, the following steps are optional:
 - You can rescale the *System* object. The length of the yellow rods is approximately the total travel length of the robotic arm.
-- If you want to change the menu location, there is a *Full Controller* component in  `(prefab)/System/MA-MenuInstaller`
+- If you want to change the menu location, there is a *Full Controller* component in `(prefab)/System`
 - By default, the calibration origin will be on the right hand.
     - You can choose to switch it to your left hand using the *Armature Link* component located on `(prefab)/System/HandRoot`.
     - It is not obvious whether you should define it as your dominant or non-dominant hand. Personally, I have it set up to my dominant hand.
