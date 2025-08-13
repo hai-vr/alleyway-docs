@@ -49,7 +49,7 @@ You don't have to do this again next time.
 
 <HaiVideo src="./img/yEUYgrVMAS-f-OK.mp4" autoWidth={false} halfWidth={true} loop={true}></HaiVideo>
 
-If it doesn't look like this, or if the message **Checksum is failing** appears in read, then:
+If it doesn't look like this, or if the message **Checksum is failing** appears in red, then:
 - Make sure your SteamVR menu is not open.
 - Click the + and - buttons to shift the pixels around.
 - Check out the [next page for further troubleshooting](./fix-calibration-errors).
