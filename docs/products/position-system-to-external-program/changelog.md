@@ -6,6 +6,15 @@ sidebar_position: 100
 
 ---
 
+## 1.0.2
+
+- 🌃 *No change in prefab or shader.*
+- 🖥️ *No change in the program.*
+
+There are no changes in this release that will affect you.
+
+The `package.json` has been updated with a new description, which will be displayed in listing aggregators.
+
 ## 1.0.1
 
 - 🌃 *No change in prefab or shader.*
