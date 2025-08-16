@@ -9,7 +9,7 @@ sidebar_position: 100
 ## 1.0.2
 
 - 🌃 *No change in prefab or shader.*
-- 🖥️ *No change in the program.*
+- 🌃 *No change in the program.*
 
 There are no changes in this release that will affect you.
 
