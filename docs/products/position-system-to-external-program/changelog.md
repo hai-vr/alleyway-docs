@@ -6,6 +6,16 @@ sidebar_position: 100
 
 ---
 
+## 1.1.0
+
+- 🌃 *No change in prefab or shader.*
+- 🖥️ *Program has been updated.*
+
+Add minimum height hard limit:
+- This prevents the robotic arm from going below a specific height, limiting its range of motion.
+- When *Compensate virtual scale* is checked, the virtual scale is internally compensated **and** an offset is applied
+  so that it still takes the full travel in the virtual space to move in the range between the hard limits.
+
 ## 1.0.2
 
 - 🌃 *No change in prefab or shader.*
