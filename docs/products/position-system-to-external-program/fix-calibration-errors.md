@@ -14,6 +14,12 @@ https://discord.gg/3VzveJQYWE
 
 If the error *Checksum is Failing* appears in red, check the following possible issues:
 
+:::tip
+For reference, **this video below** is what you should be seeing when it works:
+
+<HaiVideo src="./img/yEUYgrVMAS-f-OK.mp4" autoWidth={false} halfWidth={true} loop={true}></HaiVideo>
+:::
+
 ### The pixels are completely missing
 
 <HaiVideo src="./img/yEUYgrVMAS-f-MISSING.mp4" autoWidth={false} halfWidth={true} loop={true}></HaiVideo>
