@@ -40,7 +40,10 @@ in the virtual space to move in the range between the hard limits. This can be d
 ![hasm_thumbnail_71b6434e-e78b-40f6-b02f-1838e58b6acb.png](img/hasm_thumbnail_71b6434e-e78b-40f6-b02f-1838e58b6acb.png)
 
 :::tip
-It is recommended to lower this value if you think that the robotic arm travels too high.
+It is recommended to lower the maximum height if you think that the robotic arm travels too high.
+Another option is to physically move the robotic arm anchor point lower, and then increase the minimum height.
+
+If your robotic arm bottoms out too early, then you may physically tweak your robotic arm anchor point so that it is higher, or increase the minimum height.
 :::
 
 ## Offsets
