@@ -18,7 +18,7 @@ If they already have a standard DPS-like light such as SPS, then they can contro
 
 The software can be downloaded at this location:
 
-- Download **[1.0.1 software (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/1.0.1/position-system-1.0.1-executable.zip)**
+- Download **[1.1.0 software (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/1.1.0/position-system-1.1.0-executable.zip)**
 
 If you don't have it already, download .NET 7.0 Runtime "Run console apps" https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime
 
@@ -43,7 +43,7 @@ To download the prefab:
 
 Alternatively, you could get the .unitpackage file here:
 
-- Download **[1.0.1 .unitypackage (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/1.0.1/dev.hai-vr.alleyway.position-system-1.0.1.unitypackage)**
+- Download **[1.1.0 .unitypackage (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/1.1.0/dev.hai-vr.alleyway.position-system-1.1.0.unitypackage)**
 
 ## Resonite
 
