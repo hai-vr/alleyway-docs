@@ -48,3 +48,11 @@ you may or may not want to reduce the number of updates sent to the device every
 The Wireless tab in the UI lets you change the update rate. By default, the update rate is 100 per second.
 
 A lower value, such as 20 updates per second, could be more reasonable for wireless devices.
+
+### Older versions of the software
+
+The [Install](./install) page only links to the newest version of the software and prefab.
+
+For older versions, you need to look at the [GitHub releases](https://github.com/hai-vr/position-system-to-external-program/releases).
+
+All releases and executables are compiled directly by GitHub's automation infrastructure using the source code of the repository.
