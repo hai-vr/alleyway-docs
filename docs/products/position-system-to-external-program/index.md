@@ -54,7 +54,8 @@ As of currently, this software is known to function with the following robotic a
 :::info
 If your device is not listed in that table above, please [check out the FAQ](./other).
 
-Wireless is not yet supported, as we do not currently have contributing developers who own such a device.
+Although there is no support for wireless yet as we do not currently have contributing developers who own such a device,
+there is at least one OSR2+ user who has successfully used *Serial over Bluetooth* using custom firmware; so wireless is definitely a possibility.
 
 If you are a developer, [you may be able to help](other#my-robotic-arm-is-not-in-that-list-how-to-add-it).
 :::

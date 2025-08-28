@@ -80,6 +80,20 @@ The shape of this cone does not get squished when you lower the hard limit, so i
 ![hasm_thumbnail_589b3e11-7942-4611-a98c-82114561dbc1.png](img/hasm_thumbnail_589b3e11-7942-4611-a98c-82114561dbc1.png)
 :::
 
+## Twist
+
+If you own a device that supports a twist axis: Unfortunately, DPS-like lights only support position and direction information;
+it does not have rotation information along the direction axis.
+
+This means we can't have *true "twist"*. Instead, there is are simulated twist settings:
+
+- The *Simulated twist from Roll* will add twist based on how much the direction leans sideways.
+- The *Simulated twist from Lateral* will add twist based on how much the position is laterally away from the center.
+
+The slider controls how much these influence the twist. You can set a negative number to twist in the opposite direction.
+
+You can combine both simulated twist from Roll and Lateral.
+
 ## Rotate machine
 
 :::warning

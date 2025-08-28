@@ -6,6 +6,21 @@ sidebar_position: 100
 
 ---
 
+## 1.2.0
+
+- 🌃 *No change in prefab or shader.*
+- 🖥️ *Program has been updated.*
+
+Add simulated twist:
+- Since DPS-like data only contains position and direction information, we cannot have true "twist" because this information is missing.
+- Add simulated twist which is derived from lateral position and roll.
+- In Robotics settings, add Twist section to configure this simulated twist.
+
+Try to fix an issue when a device uses Serial communication over Bluetooth:
+- Add a new setting to limit the number of updates per second, located in the new *Wireless* tab in the UI.
+
+*Compared to 1.2.0-alpha.2: Only show the rate limit slider if the checkbox is enabled.*
+
 ## 1.2.0-alpha.2
 
 - 🌃 *No change in prefab or shader.*

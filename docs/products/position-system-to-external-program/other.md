@@ -17,7 +17,8 @@ As of currently, this software is known to function with the following robotic a
 | Tempest MAx | OSR2+ | T-code   | Serial port        |                                                                                                    |
 | Tempest MAx | SR6   | T-code   | Serial port        | ⚠️ Please read:<br/>[Patching the SR6 firmware](./firmware-patches#patching-the-sr6-firmware-file) |
 
-Wireless is not yet supported, as we do not currently have contributing developers who own such a device.
+Although there is no support for wireless yet as we do not currently have contributing developers who own such a device,
+there is at least one OSR2+ user who has successfully used *Serial over Bluetooth* using custom firmware; so wireless is definitely a possibility.
 
 Other robotic arms that support the T-code protocol may be supported.
 
@@ -38,3 +39,12 @@ If your device only has one axis of motion, it might be possible to add integrat
 If you made it this far into this documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:
 https://discord.gg/3VzveJQYWE
 :::
+
+### Wireless rate limiting
+
+If you are developing a wireless module, or you are using special firmware that uses serial communication over Bluetooth,
+you may or may not want to reduce the number of updates sent to the device every second.
+
+The Wireless tab in the UI lets you change the update rate. By default, the update rate is 100 per second.
+
+A lower value, such as 20 updates per second, could be more reasonable for wireless devices.
