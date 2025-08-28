@@ -85,7 +85,8 @@ The shape of this cone does not get squished when you lower the hard limit, so i
 If you own a device that supports a twist axis: Unfortunately, DPS-like lights only support position and direction information;
 it does not have rotation information along the direction axis.
 
-This means we can't have *true "twist"*. Instead, there are simulated twist settings:
+This means we can't have *true "twist"*. Instead, you can enable *simulated* twist settings to drive the twist motors anyway using
+other available information:
 
 - The *Simulated twist from Roll* will add twist based on how much the direction leans sideways.
 - The *Simulated twist from Lateral* will add twist based on how much the position is laterally away from the center.
