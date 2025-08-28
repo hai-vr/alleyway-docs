@@ -102,8 +102,12 @@ const config = {
       footer: {
         style: 'dark',
         links: [
+          {
+            label: 'GitHub',
+            href: 'https://github.com/hai-vr/',
+          }
         ],
-        copyright: `Built with Docusaurus.`,
+        copyright: ` `,
       },
       prism: {
         theme: prismThemes.github,
