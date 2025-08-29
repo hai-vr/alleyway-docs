@@ -40,6 +40,15 @@ If you made it this far into this documentation, you may want to know there is a
 https://discord.gg/3VzveJQYWE
 :::
 
+### Wireless: The robotic arm is stuttering, or it is not smooth
+
+There has been at least one case reported by a user of a robotic arm abnormally stuttering, and that user was using
+wireless communication (serial communication over Bluetooth). It turns out that there was probably some wireless interference
+caused by the PC.
+
+If you are using a wireless device, try to attach the Bluetooth dongle transmitter onto a USB extension cable
+distancing it away from the PC.
+
 ### Wireless rate limiting
 
 If you are developing a wireless module, or you are using special firmware that uses serial communication over Bluetooth,
