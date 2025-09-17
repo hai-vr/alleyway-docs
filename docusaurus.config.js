@@ -42,7 +42,7 @@ const config = {
   },
 
   scripts: [
-    {src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'alleyway.hai-vr.dev'}
+    // {src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'alleyway.hai-vr.dev'}
   ],
 
   presets: [
