@@ -24,10 +24,10 @@ If you don't have it already, download .NET 7.0 Runtime "Run console apps" https
 
 *You can [audit the software source code on GitHub](https://github.com/hai-vr/position-system-to-external-program/) if you are a developer.*
 
-:::info
-If you made it this far into this documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:
-https://discord.gg/3VzveJQYWE
-:::
+[//]: # (:::info)
+[//]: # (If you made it this far into this documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:)
+[//]: # (https://discord.gg/3VzveJQYWE)
+[//]: # (:::)
 
 ## Download prefab
 

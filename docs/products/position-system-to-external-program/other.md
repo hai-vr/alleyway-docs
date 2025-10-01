@@ -35,10 +35,10 @@ If you know of a developer willing to try adding support, [let them check out th
 
 If your device only has one axis of motion, it might be possible to add integration with *Intiface* sometime in the future.
 
-:::info
-If you made it this far into this documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:
-https://discord.gg/3VzveJQYWE
-:::
+[//]: # (:::info)
+[//]: # (If you made it this far into this documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:)
+[//]: # (https://discord.gg/3VzveJQYWE)
+[//]: # (:::)
 
 ### Wireless: The robotic arm is stuttering, or it is not smooth
 

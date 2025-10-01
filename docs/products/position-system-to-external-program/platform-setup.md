@@ -183,7 +183,8 @@ Optionally:
 - You can rescale the *System* object. The length of the yellow rods is approximately the total travel length of the robotic arm.
 
 :::info[Additional information for advanced ChilloutVR users]
-*If you are more familiar with ChilloutVR, please reach out on the [temporary Alleyway Discord server](https://discord.gg/3VzveJQYWE).*
+
+[//]: # (*If you are more familiar with ChilloutVR, please reach out on the [temporary Alleyway Discord server]&#40;https://discord.gg/3VzveJQYWE&#41;.*)
 
 The following will give you an insight of how to convert this prefab.
 

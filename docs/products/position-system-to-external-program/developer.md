@@ -13,10 +13,10 @@ Most of the documentation of this website is meant for users of the application.
 If you are a developer, you should consult the [README.md on GitHub](https://github.com/hai-vr/position-system-to-external-program/)
 for technical information about the extraction process, the shader, the WebSockets API, and the camera position extraction.
 
-:::info
-If you made it this far into this documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:
-https://discord.gg/3VzveJQYWE
-:::
+[//]: # (:::info)
+[//]: # (If you made it this far into this documentation, you may want to know there is a **new temporary Discord server** here for early troubleshooting:)
+[//]: # (https://discord.gg/3VzveJQYWE)
+[//]: # (:::)
 
 ## Adding support for other robotic arms
 

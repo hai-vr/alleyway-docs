@@ -7,10 +7,10 @@ import {HaiVideo} from "/src/components/HaiVideo";
 
 # Fix calibration errors
 
-:::info
-You may want to know there is a **new temporary Discord server** here for early troubleshooting:
-https://discord.gg/3VzveJQYWE
-:::
+[//]: # (:::info)
+[//]: # (You may want to know there is a **new temporary Discord server** here for early troubleshooting:)
+[//]: # (https://discord.gg/3VzveJQYWE)
+[//]: # (:::)
 
 If the error *Checksum is Failing* appears in red, check the following possible issues:
 
@@ -47,7 +47,7 @@ For reference, **this video below** is what you should be seeing when it works:
 - Try changing to a different world, especially if your current world has strong post-processing effects.
 - Try pressing the *Reset to defaults* button.
 
-:::info
-You may want to know there is a **new temporary Discord server** here for early troubleshooting:
-https://discord.gg/3VzveJQYWE
-:::
+[//]: # (:::info)
+[//]: # (You may want to know there is a **new temporary Discord server** here for early troubleshooting:)
+[//]: # (https://discord.gg/3VzveJQYWE)
+[//]: # (:::)
