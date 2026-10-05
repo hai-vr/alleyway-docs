@@ -24,7 +24,7 @@ Other robotic arms that support the T-code protocol may be supported.
 
 ### My robotic arm is not in that list. How to add it?
 
-If your device was designed by Tempest, it will likely work already because <!--UNKNOWN-PRONOUN-->their devices
+If your device was designed by Tempest, it will likely work already because {/*UNKNOWN-PRONOUN*/}their devices
 use the T-code protocol. I have not tested this.
 
 Otherwise, you're going to need the help of another developer to do this.
