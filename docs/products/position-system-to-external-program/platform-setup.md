@@ -124,7 +124,7 @@ We do not currently provide a readily usable ProtoFlux item at this time. Use th
 If you're reading this, you probably have better knowledge of ProtoFlux than I do, so if you see obvious mistakes in that blueprint,
 don't copy it.
 
-For example, this should only run on the computer connected to the robotics arm, but this graph does not currently restrict it.
+For example, this should only run on the computer connected to the robotic arm, but this graph does not currently restrict it.
 :::
 
 [![resonite_websocket.jpg](img/resonite_websocket.jpg)](img/resonite_websocket.jpg)

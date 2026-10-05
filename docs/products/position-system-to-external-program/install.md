@@ -41,7 +41,7 @@ To download the prefab:
     - `https://hai-vr.github.io/alleyway-listing/index.json`
 - Add the *Alleyway - Position System to External Program* package to your project.
 
-Alternatively, you could get the .unitpackage file here:
+Alternatively, you could get the .unitypackage file here:
 
 - Download **[1.2.0 .unitypackage (GitHub)](https://github.com/hai-vr/position-system-to-external-program/releases/download/1.2.0/dev.hai-vr.alleyway.position-system-1.2.0.unitypackage)**
 

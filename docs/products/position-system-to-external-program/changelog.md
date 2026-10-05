@@ -279,4 +279,4 @@ This beta contains an executable (`.exe`) that can:
 
 The package contains a prefab and a shader:
 - The prefab uses Modular Avatar and creates a menu. It has a total synced cost of 2 bits.
-- The prefab does not require any manual setup. The shader is already setup within the prefab.
+- The prefab does not require any manual setup. The shader is already set up within the prefab.
