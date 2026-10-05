@@ -1,9 +1,8 @@
 name: Test deployment
 
+# Automatic build on pull requests is disabled: run manually from the Actions tab.
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
