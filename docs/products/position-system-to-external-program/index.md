@@ -4,12 +4,15 @@ title: "Position System to External Program"
 import {HaiTags} from "/src/components/HaiTags";
 import {HaiTag} from "/src/components/HaiTag";
 import {HaiVideo} from "/src/components/HaiVideo";
+import HaiLocalization from "/src/components/HaiLocalization";
 
 <HaiTags>
 <HaiTag requiresVRChat={true} short={true} />
 <HaiTag requiresResonite={true} short={true} />
 <HaiTag requiresChilloutVR={true} short={true} />
 </HaiTags>
+
+<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 *Position System to External Program* is a **prefab** and a **program** that lets you connect the position of standard DPS-like lights
 to a robotic arm.

@@ -4,8 +4,11 @@ sidebar_position: 10
 import {HaiTags} from "/src/components/HaiTags";
 import {HaiTag} from "/src/components/HaiTag";
 import {HaiVideo} from "/src/components/HaiVideo";
+import HaiLocalization from "/src/components/HaiLocalization";
 
 # Install
+
+<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 :::tip
 Only the **computer connected** to the robotic arm needs the software and the prefab. The other users in the virtual space do not need it,

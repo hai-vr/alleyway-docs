@@ -2,7 +2,11 @@
 title: Changelog
 sidebar_position: 100
 ---
+import HaiLocalization from "/src/components/HaiLocalization";
+
 # Position System to External Program - Changelog
+
+<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 ---
 

@@ -4,8 +4,11 @@ sidebar_position: 43
 import {HaiTags} from "/src/components/HaiTags";
 import {HaiTag} from "/src/components/HaiTag";
 import {HaiVideo} from "/src/components/HaiVideo";
+import HaiLocalization from "/src/components/HaiLocalization";
 
 # Connect the robotic arm
+
+<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 - Connect your device through USB.
 - Power on your robotic arm.

@@ -4,8 +4,11 @@ sidebar_position: 200
 import {HaiTags} from "/src/components/HaiTags";
 import {HaiTag} from "/src/components/HaiTag";
 import {HaiVideo} from "/src/components/HaiVideo";
+import HaiLocalization from "/src/components/HaiLocalization";
 
 # Patching the SR6 firmware
+
+<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 ## Patching the SR6 firmware file
 

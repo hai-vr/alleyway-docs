@@ -4,12 +4,15 @@ sidebar_position: 45
 import {HaiTags} from "/src/components/HaiTags";
 import {HaiTag} from "/src/components/HaiTag";
 import {HaiVideo} from "/src/components/HaiVideo";
+import HaiLocalization from "/src/components/HaiLocalization";
 
 # Use the prefab
 
 <HaiTags>
 <HaiTag requiresVRChat={true} short={true} /><HaiTag requiresChilloutVR={true} short={true} />
 </HaiTags>
+
+<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 Once you have [correctly calibrated once](first-time-calibration) and [connected the robotic arm](connect), here's how to use the prefab.
 

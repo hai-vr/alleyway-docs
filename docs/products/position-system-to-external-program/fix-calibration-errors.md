@@ -4,8 +4,11 @@ sidebar_position: 41
 import {HaiTags} from "/src/components/HaiTags";
 import {HaiTag} from "/src/components/HaiTag";
 import {HaiVideo} from "/src/components/HaiVideo";
+import HaiLocalization from "/src/components/HaiLocalization";
 
 # Fix calibration errors
+
+<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 [//]: # (:::info)
 [//]: # (You may want to know there is a **new temporary Discord server** here for early troubleshooting:)

@@ -13,6 +13,7 @@
 
 // @ts-ignore
 import React from 'react';
+import Translate from '@docusaurus/Translate';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
@@ -59,8 +60,8 @@ export function HaiTag({
                            short,
                            supporter
 }: Props): JSX.Element {
-    let div = short ? <></> : <>Compatible with </>;
-    let div2 = short ? <></> : <>Requires </>;
+    let div = short ? <></> : <><Translate id="hai.tag.compatible_with">Compatible with </Translate></>;
+    let div2 = short ? <></> : <><Translate id="hai.tag.requires">Requires </Translate></>;
     return (
         <span>
                 {requiresVRChat ? <div className={clsx(styles.hai_tag, styles.hai_tag_requires_vrchat)}>💬 {div2}<span className="notranslate">VRChat</span></div> : ''}
@@ -77,8 +78,8 @@ export function HaiTag({
                 {compatibleWithBeatSaber ? <div className={clsx(styles.hai_tag, styles.hai_tag_compatible_with_beatsaber)}>{div}<span className="notranslate">Beat Saber</span></div> : ''}
                 {notCompatibleWithGltf ? <div className={clsx(styles.hai_tag, styles.hai_tag_not_compatible_with_gltf)}>🚫 Not compatible with GLB/GLTF format</div> : ''}
                 {requiresWarudo ? <div className={clsx(styles.hai_tag, styles.hai_tag_compatible_with_warudo)}>📹 {div2}<span className="notranslate">Warudo</span></div> : ''}
-                {isUniversal ? <div className={clsx(styles.hai_tag, styles.hai_tag_universal)}>🌊 Any Platform</div> : ''}
-                {notVRChat ? <div className={clsx(styles.hai_tag, styles.hai_tag_universal)}>🌊 Any Platform, except <span className="notranslate">VRChat</span></div> : ''}
+                {isUniversal ? <div className={clsx(styles.hai_tag, styles.hai_tag_universal)}>🌊 <Translate id="hai.tag.any_platform">Any Platform</Translate></div> : ''}
+                {notVRChat ? <div className={clsx(styles.hai_tag, styles.hai_tag_universal)}>🌊 <Translate id="hai.tag.any_platform">Any Platform</Translate>, except <span className="notranslate">VRChat</span></div> : ''}
             {supporter ? <div className={clsx(styles.hai_tag, styles.hai_tag_supporter)}>⭐ All Supporter tiers <a href="https://www.patreon.com/vr_hai">(5€+)</a></div> : ''}
             {compatibleWithPhotoshop ? <div className={clsx(styles.hai_tag, styles.hai_tag_misc)}>{div}<span className="notranslate">Photoshop 2024</span></div> : ''}
             {compatibleWithGIMP ? <div className={clsx(styles.hai_tag, styles.hai_tag_misc)}>{div}<span className="notranslate">GIMP</span></div> : ''}

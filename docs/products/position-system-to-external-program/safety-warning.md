@@ -4,8 +4,11 @@ sidebar_position: 5
 import {HaiTags} from "/src/components/HaiTags";
 import {HaiTag} from "/src/components/HaiTag";
 import {HaiVideo} from "/src/components/HaiVideo";
+import HaiLocalization from "/src/components/HaiLocalization";
 
 # ⚠️ Safety warning
+
+<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 Normally, robotic arms for domestic use are traditionally controlled using mathematical algorithms that produce smooth curves.
 This makes them very predictable, testable, and ensures that the motion of the robotic arm is comfortable and relatively free of haphazard motions.
