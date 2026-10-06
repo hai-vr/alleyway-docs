@@ -8,7 +8,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # ⚠️ 安全上の警告
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 通常、家庭用のロボットアームは、滑らかな曲線を生成する数学的アルゴリズムによって制御されています。
 そのため動きは非常に予測しやすく、テストもしやすく、ロボットアームの動作が快適で、不規則な動きが比較的少ないことが保証されています。

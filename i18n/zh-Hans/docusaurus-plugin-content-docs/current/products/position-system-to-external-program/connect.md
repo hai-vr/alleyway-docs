@@ -8,7 +8,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # 连接机械臂
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 - 通过 USB 连接你的设备。
 - 打开机械臂的电源。

@@ -8,7 +8,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # 初回キャリブレーション
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 プログラムを初めて起動するときは、動作することを確認するための設定が必要です。
 

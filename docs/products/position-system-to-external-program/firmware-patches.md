@@ -8,7 +8,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # Patching the SR6 firmware
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 ## Patching the SR6 firmware file
 

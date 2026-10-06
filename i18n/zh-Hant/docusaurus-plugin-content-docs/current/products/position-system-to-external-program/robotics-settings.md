@@ -5,7 +5,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # 機器人學設定
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 *機器人學* 分頁中的設定可讓你自訂機械手臂在使用過程中的行為。
 

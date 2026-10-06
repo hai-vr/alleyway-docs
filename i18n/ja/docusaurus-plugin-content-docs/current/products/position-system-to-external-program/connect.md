@@ -8,7 +8,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # ロボットアームを接続する
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 - デバイスをUSBで接続します。
 - ロボットアームの電源を入れます。

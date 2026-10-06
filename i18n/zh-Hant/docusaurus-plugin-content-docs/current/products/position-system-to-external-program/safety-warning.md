@@ -8,7 +8,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # ⚠️ 安全警告
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 一般而言，家用機械手臂傳統上是由產生平滑曲線的數學演算法來控制。
 這使它們的運動非常容易預測、便於測試，並能確保機械手臂的動作舒適，且相對不會出現雜亂無章的動作。

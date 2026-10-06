@@ -6,7 +6,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # Position System to External Program - Changelog
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 ---
 

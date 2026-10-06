@@ -5,7 +5,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # Robotics 设置
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 Robotics 标签页中的设置可让你自定义机械臂在使用过程中的行为。
 

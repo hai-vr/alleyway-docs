@@ -12,6 +12,7 @@ interface Props {
 const languageNames: Record<string, string> = {
   en: 'English',
   ja: '日本語',
+  ko: '한국어',
   'zh-Hant': '繁體中文',
   'zh-Hans': '简体中文',
 };
@@ -24,6 +25,7 @@ const languageIcons: Record<string, string> = {
 const availablePhrases: Record<string, string> = {
   en: 'This page is available in English',
   ja: 'このページは日本語でご覧いただけます',
+  ko: '이 페이지는 한국어로 제공됩니다',
   'zh-Hant': '本頁面有繁體中文版本',
   'zh-Hans': '本页面有简体中文版本',
 };
@@ -31,6 +33,7 @@ const availablePhrases: Record<string, string> = {
 const aiDisclaimer: Record<string, string> = {
   en: 'Translations to non-English languages are provided by Claude Opus 5.5.',
   ja: '英語以外の言語への翻訳はClaude Opus 5.5によって提供されています。',
+  ko: '영어 이외의 언어 번역은 Claude Opus 5.5에서 제공합니다.',
   'zh-Hant': '非英語語言的翻譯由 Claude Opus 5.5 提供。',
   'zh-Hans': '非英语语言的翻译由 Claude Opus 5.5 提供。',
 };
@@ -38,6 +41,7 @@ const aiDisclaimer: Record<string, string> = {
 const aiLocalizationDisclaimer: Record<string, string> = {
   en: 'Additionally, the localization files used by the application are provided to the large language model as additional context for the translation of this user manual.',
   ja: 'また、アプリケーションで使用されているローカライズファイルが、このユーザーマニュアルの翻訳のための追加のコンテキストとして大規模言語モデルに提供されています。',
+  ko: '또한, 애플리케이션에서 사용하는 로컬라이제이션 파일이 이 사용자 매뉴얼의 번역을 위한 추가 컨텍스트로 대규모 언어 모델에 제공됩니다.',
   'zh-Hant': '此外，應用程式所使用的在地化檔案也作為此使用者手冊翻譯的補充內容提供給大型語言模型。',
   'zh-Hans': '此外，应用程序所使用的本地化文件也作为此用户手册翻译的补充内容提供给大型语言模型。',
 };

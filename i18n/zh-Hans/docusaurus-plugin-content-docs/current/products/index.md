@@ -9,6 +9,6 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # 产品
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 - **[Position System to External Program](position-system-to-external-program)**<br/>*将类 DPS 灯光连接到机械臂。*

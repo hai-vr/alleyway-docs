@@ -5,7 +5,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # Robotics settings
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 The Robotics settings let you customize the behavior of your robotic arm during use.
 

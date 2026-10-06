@@ -12,7 +12,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 <HaiTag requiresChilloutVR={true} short={true} />
 </HaiTags>
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 *Position System to External Program* is a **prefab** and a **program** that lets you connect the position of standard DPS-like lights
 to a robotic arm.

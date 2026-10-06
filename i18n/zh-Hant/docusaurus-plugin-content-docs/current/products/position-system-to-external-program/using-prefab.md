@@ -12,7 +12,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 <HaiTag requiresVRChat={true} short={true} /><HaiTag requiresChilloutVR={true} short={true} />
 </HaiTags>
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 在你[正確完成一次校準](first-time-calibration)並[連接好機械手臂](connect)之後，以下是使用預製物件的方法。
 

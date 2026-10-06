@@ -9,7 +9,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # 開発者向けドキュメント
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 このウェブサイトのドキュメントのほとんどは、アプリケーションのユーザー向けです。
 

@@ -8,7 +8,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # ⚠️ Safety warning
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 Normally, robotic arms for domestic use are traditionally controlled using mathematical algorithms that produce smooth curves.
 This makes them very predictable, testable, and ensures that the motion of the robotic arm is comfortable and relatively free of haphazard motions.

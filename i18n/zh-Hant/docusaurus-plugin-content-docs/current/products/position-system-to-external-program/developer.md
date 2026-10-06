@@ -9,7 +9,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # 開發者文件
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 本網站的大部分文件是寫給應用程式使用者的。
 

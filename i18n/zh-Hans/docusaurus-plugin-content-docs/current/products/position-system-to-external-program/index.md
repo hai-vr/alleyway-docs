@@ -12,7 +12,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 <HaiTag requiresChilloutVR={true} short={true} />
 </HaiTags>
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 *Position System to External Program* 是一个**预制件**和一个**程序**，可让你将标准类 DPS 灯光的位置连接到机械臂。
 

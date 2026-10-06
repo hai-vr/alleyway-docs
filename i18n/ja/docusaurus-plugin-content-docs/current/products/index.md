@@ -9,6 +9,6 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # 製品
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 - **[Position System to External Program](position-system-to-external-program)**<br/>*DPS系ライトをロボットアームに接続します。*

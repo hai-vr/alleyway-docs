@@ -5,7 +5,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # 常見問題
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 ### 程式的設定檔儲存在哪裡？ {/* #where-are-the-program-config-files-saved */}
 

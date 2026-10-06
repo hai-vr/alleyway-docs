@@ -8,7 +8,7 @@ import HaiLocalization from "/src/components/HaiLocalization";
 
 # ⚠️ 安全警告
 
-<HaiLocalization languages={['en', 'ja', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
+<HaiLocalization languages={['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant']} applicationIsLocalized={true} />
 
 通常，家用机械臂传统上是由生成平滑曲线的数学算法来控制的。
 这使它们的运动非常可预测、易于测试，并能确保机械臂的运动舒适，且相对不会出现杂乱无章的动作。
